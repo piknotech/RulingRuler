@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC10BFFE1FAE69FB008FF654 /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10BFFD1FAE69FB008FF654 /* Dimension.swift */; };
 		CCD574E31FAE65BD00AA0F69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD574E21FAE65BD00AA0F69 /* AppDelegate.swift */; };
 		CCD574E51FAE65BD00AA0F69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD574E41FAE65BD00AA0F69 /* ViewController.swift */; };
 		CCD574E81FAE65BD00AA0F69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCD574E61FAE65BD00AA0F69 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC10BFFD1FAE69FB008FF654 /* Dimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimension.swift; sourceTree = "<group>"; };
 		CCD574DF1FAE65BD00AA0F69 /* Ruling Ruler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ruling Ruler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCD574E21FAE65BD00AA0F69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCD574E41FAE65BD00AA0F69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +37,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC10BFF81FAE6986008FF654 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				CCD574E61FAE65BD00AA0F69 /* Main.storyboard */,
+				CCD574EB1FAE65BD00AA0F69 /* LaunchScreen.storyboard */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		CC10BFF91FAE6994008FF654 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				CCD574E21FAE65BD00AA0F69 /* AppDelegate.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		CC10BFFA1FAE69A2008FF654 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CCD574E41FAE65BD00AA0F69 /* ViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		CC10BFFB1FAE69AF008FF654 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				CCD574E91FAE65BD00AA0F69 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		CC10BFFC1FAE69B4008FF654 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CCD574EE1FAE65BD00AA0F69 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CC10BFFF1FAE6C4A008FF654 /* Calculation */ = {
+			isa = PBXGroup;
+			children = (
+				CC10BFFD1FAE69FB008FF654 /* Dimension.swift */,
+			);
+			path = Calculation;
+			sourceTree = "<group>";
+		};
 		CCD574D61FAE65BD00AA0F69 = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +105,12 @@
 		CCD574E11FAE65BD00AA0F69 /* Ruling Ruler */ = {
 			isa = PBXGroup;
 			children = (
-				CCD574E21FAE65BD00AA0F69 /* AppDelegate.swift */,
-				CCD574E41FAE65BD00AA0F69 /* ViewController.swift */,
-				CCD574E61FAE65BD00AA0F69 /* Main.storyboard */,
-				CCD574E91FAE65BD00AA0F69 /* Assets.xcassets */,
-				CCD574EB1FAE65BD00AA0F69 /* LaunchScreen.storyboard */,
-				CCD574EE1FAE65BD00AA0F69 /* Info.plist */,
+				CC10BFF91FAE6994008FF654 /* General */,
+				CC10BFFA1FAE69A2008FF654 /* View Controller */,
+				CC10BFFF1FAE6C4A008FF654 /* Calculation */,
+				CC10BFF81FAE6986008FF654 /* Interface */,
+				CC10BFFB1FAE69AF008FF654 /* Assets */,
+				CC10BFFC1FAE69B4008FF654 /* Supporting Files */,
 			);
 			path = "Ruling Ruler";
 			sourceTree = "<group>";
@@ -137,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCD574E51FAE65BD00AA0F69 /* ViewController.swift in Sources */,
+				CC10BFFE1FAE69FB008FF654 /* Dimension.swift in Sources */,
 				CCD574E31FAE65BD00AA0F69 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,7 +328,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7A8KUDWX52;
-				INFOPLIST_FILE = "Ruling Ruler/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Ruling Ruler/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.fredpi.ruler;
@@ -292,7 +344,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7A8KUDWX52;
-				INFOPLIST_FILE = "Ruling Ruler/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Ruling Ruler/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.fredpi.ruler;
