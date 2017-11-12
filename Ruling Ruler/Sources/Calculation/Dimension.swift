@@ -56,13 +56,13 @@ class Dimension {
     }()
 
     /// The number of pixels per centimeter for this device
-    static let pixelsPerCentimeter: CGFloat? = computeIfSome(optional: pixelsPerInch) { $0 / 2.54 }
+    static let pixelsPerCentimeter = pixelsPerInch! / 2.54
 
     /// The number of points per inch for this device
-    static let pointsPerInch: CGFloat? = computeIfSome(optional: pixelsPerInch) { $0 / UIScreen.main.nativeScale }
+    static let pointsPerInch = pixelsPerInch! / UIScreen.main.nativeScale
 
     /// The number of points per centimeter for this device
-    static let pointsPerCentimeter: CGFloat? = computeIfSome(optional: pixelsPerCentimeter) { $0 / UIScreen.main.nativeScale }
+    static let pointsPerCentimeter = pixelsPerCentimeter / UIScreen.main.nativeScale
 }
 
 fileprivate extension UIDevice {
@@ -76,12 +76,4 @@ fileprivate extension UIDevice {
         uname(&sysinfo) // ignore return value
         return String(bytes: Data(bytes: &sysinfo.machine, count: Int(_SYS_NAMELEN)), encoding: .ascii)!.trimmingCharacters(in: .controlCharacters)
     }()
-}
-
-fileprivate func computeIfSome<T: Any, S: Any>(optional: T?, computation: ((T) -> S)) -> S? {
-    if let some = optional {
-        return computation(some)
-    }
-
-    return .none
 }

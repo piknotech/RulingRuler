@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		CC10BFFE1FAE69FB008FF654 /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10BFFD1FAE69FB008FF654 /* Dimension.swift */; };
 		CCD574E31FAE65BD00AA0F69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD574E21FAE65BD00AA0F69 /* AppDelegate.swift */; };
-		CCD574E51FAE65BD00AA0F69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD574E41FAE65BD00AA0F69 /* ViewController.swift */; };
-		CCD574E81FAE65BD00AA0F69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCD574E61FAE65BD00AA0F69 /* Main.storyboard */; };
+		CCD574E51FAE65BD00AA0F69 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD574E41FAE65BD00AA0F69 /* MainViewController.swift */; };
 		CCD574EA1FAE65BD00AA0F69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCD574E91FAE65BD00AA0F69 /* Assets.xcassets */; };
 		CCD574ED1FAE65BD00AA0F69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCD574EB1FAE65BD00AA0F69 /* LaunchScreen.storyboard */; };
+		CCE89B171FB8E446007B65AE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE89B161FB8E446007B65AE /* Extensions.swift */; };
+		CCE89B1A1FB8E535007B65AE /* CmTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE89B191FB8E535007B65AE /* CmTableViewManager.swift */; };
+		CCE89B1C1FB8E53E007B65AE /* InchTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE89B1B1FB8E53E007B65AE /* InchTableViewManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CC10BFFD1FAE69FB008FF654 /* Dimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimension.swift; sourceTree = "<group>"; };
 		CCD574DF1FAE65BD00AA0F69 /* Ruling Ruler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ruling Ruler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCD574E21FAE65BD00AA0F69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CCD574E41FAE65BD00AA0F69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CCD574E71FAE65BD00AA0F69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CCD574E41FAE65BD00AA0F69 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CCD574E91FAE65BD00AA0F69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCD574EC1FAE65BD00AA0F69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCD574EE1FAE65BD00AA0F69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCE89B161FB8E446007B65AE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CCE89B191FB8E535007B65AE /* CmTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CmTableViewManager.swift; sourceTree = "<group>"; };
+		CCE89B1B1FB8E53E007B65AE /* InchTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InchTableViewManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,13 +41,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CC10BFF81FAE6986008FF654 /* Interface */ = {
+		CC10BFF81FAE6986008FF654 /* Launch Screen */ = {
 			isa = PBXGroup;
 			children = (
-				CCD574E61FAE65BD00AA0F69 /* Main.storyboard */,
 				CCD574EB1FAE65BD00AA0F69 /* LaunchScreen.storyboard */,
 			);
-			path = Interface;
+			path = "Launch Screen";
 			sourceTree = "<group>";
 		};
 		CC10BFF91FAE6994008FF654 /* General */ = {
@@ -54,12 +57,14 @@
 			path = General;
 			sourceTree = "<group>";
 		};
-		CC10BFFA1FAE69A2008FF654 /* View Controller */ = {
+		CC10BFFA1FAE69A2008FF654 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
-				CCD574E41FAE65BD00AA0F69 /* ViewController.swift */,
+				CCD574E41FAE65BD00AA0F69 /* MainViewController.swift */,
+				CCE89B191FB8E535007B65AE /* CmTableViewManager.swift */,
+				CCE89B1B1FB8E53E007B65AE /* InchTableViewManager.swift */,
 			);
-			path = "View Controller";
+			path = Interface;
 			sourceTree = "<group>";
 		};
 		CC10BFFB1FAE69AF008FF654 /* Assets */ = {
@@ -105,14 +110,39 @@
 		CCD574E11FAE65BD00AA0F69 /* Ruling Ruler */ = {
 			isa = PBXGroup;
 			children = (
-				CC10BFF91FAE6994008FF654 /* General */,
-				CC10BFFA1FAE69A2008FF654 /* View Controller */,
-				CC10BFFF1FAE6C4A008FF654 /* Calculation */,
-				CC10BFF81FAE6986008FF654 /* Interface */,
-				CC10BFFB1FAE69AF008FF654 /* Assets */,
-				CC10BFFC1FAE69B4008FF654 /* Supporting Files */,
+				CCE89B151FB8E353007B65AE /* Sources */,
+				CCE89B141FB8E34A007B65AE /* Resources */,
 			);
 			path = "Ruling Ruler";
+			sourceTree = "<group>";
+		};
+		CCE89B141FB8E34A007B65AE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CC10BFFB1FAE69AF008FF654 /* Assets */,
+				CC10BFF81FAE6986008FF654 /* Launch Screen */,
+				CC10BFFC1FAE69B4008FF654 /* Supporting Files */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CCE89B151FB8E353007B65AE /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CC10BFF91FAE6994008FF654 /* General */,
+				CC10BFFA1FAE69A2008FF654 /* Interface */,
+				CC10BFFF1FAE6C4A008FF654 /* Calculation */,
+				CCE89B181FB8E44A007B65AE /* Tools */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		CCE89B181FB8E44A007B65AE /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				CCE89B161FB8E446007B65AE /* Extensions.swift */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,7 +206,6 @@
 			files = (
 				CCD574ED1FAE65BD00AA0F69 /* LaunchScreen.storyboard in Resources */,
 				CCD574EA1FAE65BD00AA0F69 /* Assets.xcassets in Resources */,
-				CCD574E81FAE65BD00AA0F69 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,23 +216,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCD574E51FAE65BD00AA0F69 /* ViewController.swift in Sources */,
+				CCD574E51FAE65BD00AA0F69 /* MainViewController.swift in Sources */,
 				CC10BFFE1FAE69FB008FF654 /* Dimension.swift in Sources */,
 				CCD574E31FAE65BD00AA0F69 /* AppDelegate.swift in Sources */,
+				CCE89B1C1FB8E53E007B65AE /* InchTableViewManager.swift in Sources */,
+				CCE89B171FB8E446007B65AE /* Extensions.swift in Sources */,
+				CCE89B1A1FB8E535007B65AE /* CmTableViewManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CCD574E61FAE65BD00AA0F69 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CCD574E71FAE65BD00AA0F69 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CCD574EB1FAE65BD00AA0F69 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -328,13 +352,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7A8KUDWX52;
-				INFOPLIST_FILE = "$(SRCROOT)/Ruling Ruler/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Ruling Ruler/Resources/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.fredpi.ruler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -344,13 +368,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7A8KUDWX52;
-				INFOPLIST_FILE = "$(SRCROOT)/Ruling Ruler/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Ruling Ruler/Resources/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.fredpi.ruler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

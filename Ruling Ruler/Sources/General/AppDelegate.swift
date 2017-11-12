@@ -18,6 +18,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Methods
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        // Load view controller
+        window = UIWindow(frame: UIScreen.main.bounds)
+        var rootVc: UIViewController = MainViewController.shared
+
+        // Check whether dimensions loadable for device type
+        guard Dimension.pixelsPerInch != nil else {
+            rootVc = UIViewController() // TODO: Show error vc
+            return false
+        }
+
+        // Make visible
+        window!.rootViewController = rootVc
+        window!.makeKeyAndVisible()
+
         return true
     }
 }

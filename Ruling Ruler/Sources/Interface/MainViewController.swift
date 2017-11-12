@@ -1,0 +1,64 @@
+//
+//  ViewController.swift
+//  Ruling Ruler
+//
+//  Created by Frederick Pietschmann on 04.11.17.
+//  Copyright © 2017 Frederick Pietschmann. All rights reserved.
+//
+
+import UIKit
+
+class MainViewController: UIViewController {
+
+    // MARK: - Internal properties
+
+    static let shared = MainViewController()
+
+    var cmCount = 254
+    var inchCount = 100
+
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+
+    // MARK: Private properties
+
+    private var scrollView = UIScrollView()
+    private var cmTableView = UITableView()
+    private var inchTableView = UITableView()
+    private var cmTableViewManager = CmTableViewManager()
+    private var inchTableViewManager = InchTableViewManager()
+
+    // MARK: - Methods
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Configure table views
+        cmTableView.isScrollEnabled = false
+        cmTableView.separatorStyle = .none
+        cmTableView.frame = CGRect(x: 0, y: 0, width: 100, height: CGFloat(cmCount) * Dimension.pointsPerCentimeter)
+        inchTableView.isScrollEnabled = false
+        inchTableView.separatorStyle = .none
+        inchTableView.frame = CGRect(x: view.bounds.size.width - 100, y: 0, width: 100, height: CGFloat(inchCount) * Dimension.pointsPerInch)
+
+        // Configure table view managers
+        cmTableView.dataSource = cmTableViewManager
+        cmTableView.delegate = cmTableViewManager
+        inchTableView.dataSource = inchTableViewManager
+        inchTableView.delegate = inchTableViewManager
+
+        // Configure scroll view
+        scrollView.frame = view.bounds
+        scrollView.backgroundColor = .background
+        scrollView.decelerationRate = 0.01
+        scrollView.showsVerticalScrollIndicator = false
+        scrollView.contentSize.height = cmTableView.bounds.size.height
+
+        // Add views
+        scrollView.addSubview(cmTableView)
+        scrollView.addSubview(inchTableView)
+        view.addSubview(scrollView)
+    }
+}
+
