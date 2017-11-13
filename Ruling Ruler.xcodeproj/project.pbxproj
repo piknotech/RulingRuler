@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		CC10BFFE1FAE69FB008FF654 /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10BFFD1FAE69FB008FF654 /* Dimension.swift */; };
+		CC80930F1FB8EED400D4F726 /* CmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80930E1FB8EED400D4F726 /* CmCell.swift */; };
+		CC8093111FB8EEDD00D4F726 /* InchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8093101FB8EEDD00D4F726 /* InchCell.swift */; };
+		CC8093141FB8F05F00D4F726 /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8093131FB8F05F00D4F726 /* Classes.swift */; };
 		CCD574E31FAE65BD00AA0F69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD574E21FAE65BD00AA0F69 /* AppDelegate.swift */; };
 		CCD574E51FAE65BD00AA0F69 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD574E41FAE65BD00AA0F69 /* MainViewController.swift */; };
 		CCD574EA1FAE65BD00AA0F69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCD574E91FAE65BD00AA0F69 /* Assets.xcassets */; };
@@ -19,6 +22,9 @@
 
 /* Begin PBXFileReference section */
 		CC10BFFD1FAE69FB008FF654 /* Dimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimension.swift; sourceTree = "<group>"; };
+		CC80930E1FB8EED400D4F726 /* CmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CmCell.swift; sourceTree = "<group>"; };
+		CC8093101FB8EEDD00D4F726 /* InchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InchCell.swift; sourceTree = "<group>"; };
+		CC8093131FB8F05F00D4F726 /* Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
 		CCD574DF1FAE65BD00AA0F69 /* Ruling Ruler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ruling Ruler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCD574E21FAE65BD00AA0F69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCD574E41FAE65BD00AA0F69 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -61,8 +67,8 @@
 			isa = PBXGroup;
 			children = (
 				CCD574E41FAE65BD00AA0F69 /* MainViewController.swift */,
-				CCE89B191FB8E535007B65AE /* CmTableViewManager.swift */,
-				CCE89B1B1FB8E53E007B65AE /* InchTableViewManager.swift */,
+				CC80930D1FB8EEC300D4F726 /* Table View Managers */,
+				CC8093121FB8EEE300D4F726 /* Cells */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -89,6 +95,24 @@
 				CC10BFFD1FAE69FB008FF654 /* Dimension.swift */,
 			);
 			path = Calculation;
+			sourceTree = "<group>";
+		};
+		CC80930D1FB8EEC300D4F726 /* Table View Managers */ = {
+			isa = PBXGroup;
+			children = (
+				CCE89B191FB8E535007B65AE /* CmTableViewManager.swift */,
+				CCE89B1B1FB8E53E007B65AE /* InchTableViewManager.swift */,
+			);
+			path = "Table View Managers";
+			sourceTree = "<group>";
+		};
+		CC8093121FB8EEE300D4F726 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CC80930E1FB8EED400D4F726 /* CmCell.swift */,
+				CC8093101FB8EEDD00D4F726 /* InchCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		CCD574D61FAE65BD00AA0F69 = {
@@ -141,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				CCE89B161FB8E446007B65AE /* Extensions.swift */,
+				CC8093131FB8F05F00D4F726 /* Classes.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -219,9 +244,12 @@
 				CCD574E51FAE65BD00AA0F69 /* MainViewController.swift in Sources */,
 				CC10BFFE1FAE69FB008FF654 /* Dimension.swift in Sources */,
 				CCD574E31FAE65BD00AA0F69 /* AppDelegate.swift in Sources */,
+				CC8093111FB8EEDD00D4F726 /* InchCell.swift in Sources */,
+				CC80930F1FB8EED400D4F726 /* CmCell.swift in Sources */,
 				CCE89B1C1FB8E53E007B65AE /* InchTableViewManager.swift in Sources */,
 				CCE89B171FB8E446007B65AE /* Extensions.swift in Sources */,
 				CCE89B1A1FB8E535007B65AE /* CmTableViewManager.swift in Sources */,
+				CC8093141FB8F05F00D4F726 /* Classes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

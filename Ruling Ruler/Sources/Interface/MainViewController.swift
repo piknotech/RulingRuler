@@ -36,10 +36,16 @@ class MainViewController: UIViewController {
 
         // Configure table views
         cmTableView.isScrollEnabled = false
+        cmTableView.isUserInteractionEnabled = false
         cmTableView.separatorStyle = .none
-        cmTableView.frame = CGRect(x: 0, y: 0, width: 100, height: CGFloat(cmCount) * Dimension.pointsPerCentimeter)
+        cmTableView.backgroundColor = .clear
+        cmTableView.clipsToBounds = false
+        cmTableView.frame = CGRect(x: 0, y: 0, width: 50, height: CGFloat(cmCount) * Dimension.pointsPerCentimeter)
         inchTableView.isScrollEnabled = false
+        inchTableView.isUserInteractionEnabled = false
         inchTableView.separatorStyle = .none
+        inchTableView.backgroundColor = .clear
+        inchTableView.clipsToBounds = false
         inchTableView.frame = CGRect(x: view.bounds.size.width - 100, y: 0, width: 100, height: CGFloat(inchCount) * Dimension.pointsPerInch)
 
         // Configure table view managers

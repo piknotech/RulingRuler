@@ -59,10 +59,10 @@ class Dimension {
     static let pixelsPerCentimeter = pixelsPerInch! / 2.54
 
     /// The number of points per inch for this device
-    static let pointsPerInch = pixelsPerInch! / UIScreen.main.nativeScale
+    static let pointsPerInch = pixelsPerInch! * Sizing.pixel
 
     /// The number of points per centimeter for this device
-    static let pointsPerCentimeter = pixelsPerCentimeter / UIScreen.main.nativeScale
+    static let pointsPerCentimeter = pixelsPerCentimeter * Sizing.pixel
 }
 
 fileprivate extension UIDevice {
