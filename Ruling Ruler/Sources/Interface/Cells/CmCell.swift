@@ -15,6 +15,8 @@ class CmCell: UITableViewCell {
     var number: Int = 0 {
         didSet {
             numberLabel.text = "\(number)"
+            numberLabel.isHidden = number == 0
+            subviews.first { $0.tag == 1 }?.frame.origin.y = number == 0 ? Sizing.pixel : 0
         }
     }
 
@@ -37,13 +39,14 @@ class CmCell: UITableViewCell {
             let width = $0 == 0 ? cellSize.width : $0 == 5 ? cellSize.width * 2 / 3 : cellSize.width / 3
             let y = (cellSize.height * CGFloat($0) / 10) - Sizing.pixel
             let view = UIView(frame: CGRect(x: 0, y: y, width: width, height: 2 * Sizing.pixel))
+            view.tag = $0 == 0 ? 1 : 0
             view.backgroundColor = .white
 
             addSubview(view)
         }
 
         // Add number label
-        numberLabel.frame = CGRect(x: cellSize.width, y: 0, width: 30, height: cellSize.height)
+        numberLabel.frame = CGRect(x: cellSize.width, y: -cellSize.height/2, width: 50, height: cellSize.height)
         numberLabel.textColor = .white
         numberLabel.textAlignment = .center
         clipsToBounds = false

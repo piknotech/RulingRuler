@@ -14,8 +14,8 @@ class MainViewController: UIViewController {
 
     static let shared = MainViewController()
 
-    var cmCount = 254
-    var inchCount = 100
+    lazy var cmCount: Int = { 254 * countMultiplier }()
+    lazy var inchCount: Int = { 100 * countMultiplier }()
 
     override var prefersStatusBarHidden: Bool {
         return true
@@ -28,6 +28,7 @@ class MainViewController: UIViewController {
     private var inchTableView = UITableView()
     private var cmTableViewManager = CmTableViewManager()
     private var inchTableViewManager = InchTableViewManager()
+    private let countMultiplier = 4
 
     // MARK: - Methods
 
@@ -46,7 +47,7 @@ class MainViewController: UIViewController {
         inchTableView.separatorStyle = .none
         inchTableView.backgroundColor = .clear
         inchTableView.clipsToBounds = false
-        inchTableView.frame = CGRect(x: view.bounds.size.width - 100, y: 0, width: 100, height: CGFloat(inchCount) * Dimension.pointsPerInch)
+        inchTableView.frame = CGRect(x: view.bounds.size.width - 50, y: 0, width: 50, height: CGFloat(inchCount) * Dimension.pointsPerInch)
 
         // Configure table view managers
         cmTableView.dataSource = cmTableViewManager
