@@ -63,10 +63,17 @@ class MainViewController: UIViewController {
         scrollView.showsVerticalScrollIndicator = false
         scrollView.contentSize.height = cmTableView.bounds.size.height
 
+        // Create app icon image view
+        let appIconImageView = UIImageView(image: UIImage(named: "app_icon"))
+        appIconImageView.frame.size = CGSize(width: 80, height: 80)
+        appIconImageView.center = CGPoint(x: scrollView.center.x, y: 150)
+        appIconImageView.layer.cornerRadius = appIconImageView.bounds.size.width * 0.2237
+        appIconImageView.layer.masksToBounds = true
+
         // Add views
         scrollView.addSubview(cmTableView)
         scrollView.addSubview(inchTableView)
+        scrollView.addSubview(appIconImageView)
         view.addSubview(scrollView)
     }
 }
-
