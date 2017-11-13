@@ -26,15 +26,16 @@ class InchCell: UITableViewCell {
 
     // MARK: - Initializers
 
-    init(cellSize: CGSize, reuseIdentifier: String?) {
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         numberLabel = UILabel()
 
-        super.init(style: .default, reuseIdentifier: reuseIdentifier)
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
 
         // Set background color
         backgroundColor = .clear
 
         // Create subviews
+        let cellSize = CGSize(width: MainViewController.shared.tableViewWidth, height: Dimension.pointsPerInch)
         (0..<16).forEach {
             let width = $0 == 0 ? cellSize.width : $0 == 8 ? cellSize.width * 2 / 3 : $0 % 4 == 0 ? cellSize.width / 2 : $0 % 2 == 0 ? cellSize.width / 3 : cellSize.width / 5
             let y = (cellSize.height * CGFloat($0) / 16) - Sizing.pixel

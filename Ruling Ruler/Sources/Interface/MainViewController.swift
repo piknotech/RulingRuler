@@ -16,6 +16,7 @@ class MainViewController: UIViewController {
 
     lazy var cmCount: Int = { 254 * countMultiplier }()
     lazy var inchCount: Int = { 100 * countMultiplier }()
+    var tableViewWidth: CGFloat = 50
 
     override var prefersStatusBarHidden: Bool {
         return true
@@ -41,13 +42,13 @@ class MainViewController: UIViewController {
         cmTableView.separatorStyle = .none
         cmTableView.backgroundColor = .clear
         cmTableView.clipsToBounds = false
-        cmTableView.frame = CGRect(x: 0, y: 0, width: 50, height: CGFloat(cmCount) * Dimension.pointsPerCentimeter)
+        cmTableView.frame = CGRect(x: 0, y: 0, width: tableViewWidth, height: CGFloat(cmCount) * Dimension.pointsPerCentimeter)
         inchTableView.isScrollEnabled = false
         inchTableView.isUserInteractionEnabled = false
         inchTableView.separatorStyle = .none
         inchTableView.backgroundColor = .clear
         inchTableView.clipsToBounds = false
-        inchTableView.frame = CGRect(x: view.bounds.size.width - 50, y: 0, width: 50, height: CGFloat(inchCount) * Dimension.pointsPerInch)
+        inchTableView.frame = CGRect(x: view.bounds.size.width - tableViewWidth, y: 0, width: tableViewWidth, height: CGFloat(inchCount) * Dimension.pointsPerInch)
 
         // Configure table view managers
         cmTableView.dataSource = cmTableViewManager

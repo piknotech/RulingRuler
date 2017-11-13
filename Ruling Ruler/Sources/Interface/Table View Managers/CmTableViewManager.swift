@@ -22,7 +22,8 @@ class CmTableViewManager: NSObject, UITableViewDelegate, UITableViewDataSource {
             return cmCell
         }
 
-        let cmCell = CmCell(cellSize: CGSize(width: tableView.frame.size.width, height: Dimension.pointsPerCentimeter), reuseIdentifier: "CmCell")
+        let cmCell = CmCell(style: .default, reuseIdentifier: "CmCell")
+        tableView.register(CmCell.self, forCellReuseIdentifier: "CmCell")
         return cmCell
     }
 

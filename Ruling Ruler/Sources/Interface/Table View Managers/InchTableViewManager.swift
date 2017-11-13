@@ -18,12 +18,13 @@ class InchTableViewManager: NSObject, UITableViewDelegate, UITableViewDataSource
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cmCell = tableView.dequeueReusableCell(withIdentifier: "InchCell") {
-            return cmCell
+        if let inchCell = tableView.dequeueReusableCell(withIdentifier: "InchCell") {
+            return inchCell
         }
-
-        let cmCell = InchCell(cellSize: CGSize(width: tableView.frame.size.width, height: Dimension.pointsPerInch), reuseIdentifier: "InchCell")
-        return cmCell
+        
+        let inchCell = InchCell(style: .default, reuseIdentifier: "InchCell")
+        tableView.register(InchCell.self, forCellReuseIdentifier: "InchCell")
+        return inchCell
     }
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
