@@ -23,7 +23,7 @@ class CmTableViewManager: NSObject, UITableViewDelegate, UITableViewDataSource {
         }
 
         let cmCell = CmCell(style: .default, reuseIdentifier: "CmCell")
-        tableView.register(CmCell.self, forCellReuseIdentifier: "CmCell")
+        //tableView.register(CmCell.self, forCellReuseIdentifier: "CmCell")
         return cmCell
     }
 

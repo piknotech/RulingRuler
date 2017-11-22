@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UIScrollViewDelegate {
 
     // MARK: - Internal properties
 
@@ -37,18 +37,17 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
 
         // Configure table views
-        cmTableView.isScrollEnabled = false
+        cmTableView.register(CmCell.self, forCellReuseIdentifier: "CmCell")
         cmTableView.isUserInteractionEnabled = false
         cmTableView.separatorStyle = .none
         cmTableView.backgroundColor = .clear
         cmTableView.clipsToBounds = false
-        cmTableView.frame = CGRect(x: 0, y: 0, width: tableViewWidth, height: CGFloat(cmCount) * Dimension.pointsPerCentimeter)
-        inchTableView.isScrollEnabled = false
+        cmTableView.frame = CGRect(x: 0, y: 0, width: tableViewWidth, height: view.bounds.size.height)
         inchTableView.isUserInteractionEnabled = false
         inchTableView.separatorStyle = .none
         inchTableView.backgroundColor = .clear
         inchTableView.clipsToBounds = false
-        inchTableView.frame = CGRect(x: view.bounds.size.width - tableViewWidth, y: 0, width: tableViewWidth, height: CGFloat(inchCount) * Dimension.pointsPerInch)
+        inchTableView.frame = CGRect(x: view.bounds.size.width - tableViewWidth, y: 0, width: tableViewWidth, height: view.bounds.size.height)
 
         // Configure table view managers
         cmTableView.dataSource = cmTableViewManager
@@ -61,7 +60,8 @@ class MainViewController: UIViewController {
         scrollView.backgroundColor = .background
         scrollView.decelerationRate = 0.01
         scrollView.showsVerticalScrollIndicator = false
-        scrollView.contentSize.height = cmTableView.bounds.size.height
+        scrollView.delegate = self
+        scrollView.contentSize.height = CGFloat(cmCount) * Dimension.pointsPerCentimeter
 
         // Create app icon image view
         let appIconImageView = UIImageView(image: UIImage(named: "app_icon"))
@@ -71,9 +71,17 @@ class MainViewController: UIViewController {
         appIconImageView.layer.masksToBounds = true
 
         // Add views
-        scrollView.addSubview(cmTableView)
-        scrollView.addSubview(inchTableView)
         scrollView.addSubview(appIconImageView)
         view.addSubview(scrollView)
+        view.addSubview(cmTableView)
+        view.addSubview(inchTableView)
+    }
+
+    // MARK: UIScrollViewDelegate
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        // Set new content offset also to table views
+        cmTableView.contentOffset = scrollView.contentOffset
+        inchTableView.contentOffset = scrollView.contentOffset
     }
 }
