@@ -57,7 +57,10 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
 
         // Configure scroll view
         scrollView.frame = view.bounds
-        scrollView.backgroundColor = .background
+        let baseImage = #imageLiteral(resourceName: "gradient").resize(to: CGSize(width: view.bounds.width, height: view.bounds.height))
+        let flippedImage = baseImage.flip()
+        let patternImage = UIImage.combined(topImage: baseImage, bottomImage: flippedImage)
+        scrollView.backgroundColor = UIColor(patternImage: patternImage)
         scrollView.decelerationRate = 0.01
         scrollView.showsVerticalScrollIndicator = false
         scrollView.delegate = self

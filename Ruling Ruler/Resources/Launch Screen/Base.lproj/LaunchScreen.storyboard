@@ -17,7 +17,17 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.98039215686274506" green="0.74117647058823533" blue="0.054901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="lAC-bb-3JW">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lAC-bb-3JW" secondAttribute="trailing" id="4vf-Ur-WGI"/>
+                            <constraint firstItem="lAC-bb-3JW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Eoa-zg-yz4"/>
+                            <constraint firstItem="lAC-bb-3JW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FmN-RE-kFp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lAC-bb-3JW" secondAttribute="bottom" id="c5k-1D-GSK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -26,4 +36,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gradient" width="512" height="512"/>
+    </resources>
 </document>
