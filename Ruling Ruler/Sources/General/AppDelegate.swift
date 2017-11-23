@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Methods
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        // Setup Fabric
+        Fabric.with([Crashlytics.self, Answers.self])
+
         // Load view controller
         window = UIWindow(frame: UIScreen.main.bounds)
         var rootVc: UIViewController = MainViewController.shared

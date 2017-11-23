@@ -15,6 +15,8 @@
 		CCD574E51FAE65BD00AA0F69 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD574E41FAE65BD00AA0F69 /* MainViewController.swift */; };
 		CCD574EA1FAE65BD00AA0F69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCD574E91FAE65BD00AA0F69 /* Assets.xcassets */; };
 		CCD574ED1FAE65BD00AA0F69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCD574EB1FAE65BD00AA0F69 /* LaunchScreen.storyboard */; };
+		CCDC64BF1FC6B64A0057535A /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCDC64BD1FC6B64A0057535A /* Crashlytics.framework */; };
+		CCDC64C01FC6B64A0057535A /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCDC64BE1FC6B64A0057535A /* Fabric.framework */; };
 		CCE89B171FB8E446007B65AE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE89B161FB8E446007B65AE /* Extensions.swift */; };
 		CCE89B1A1FB8E535007B65AE /* CmTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE89B191FB8E535007B65AE /* CmTableViewManager.swift */; };
 		CCE89B1C1FB8E53E007B65AE /* InchTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE89B1B1FB8E53E007B65AE /* InchTableViewManager.swift */; };
@@ -31,6 +33,8 @@
 		CCD574E91FAE65BD00AA0F69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCD574EC1FAE65BD00AA0F69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCD574EE1FAE65BD00AA0F69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCDC64BD1FC6B64A0057535A /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
+		CCDC64BE1FC6B64A0057535A /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
 		CCE89B161FB8E446007B65AE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CCE89B191FB8E535007B65AE /* CmTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CmTableViewManager.swift; sourceTree = "<group>"; };
 		CCE89B1B1FB8E53E007B65AE /* InchTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InchTableViewManager.swift; sourceTree = "<group>"; };
@@ -41,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCDC64BF1FC6B64A0057535A /* Crashlytics.framework in Frameworks */,
+				CCDC64C01FC6B64A0057535A /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +90,8 @@
 		CC10BFFC1FAE69B4008FF654 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CCDC64BD1FC6B64A0057535A /* Crashlytics.framework */,
+				CCDC64BE1FC6B64A0057535A /* Fabric.framework */,
 				CCD574EE1FAE65BD00AA0F69 /* Info.plist */,
 			);
 			path = "Supporting Files";
@@ -180,6 +188,7 @@
 				CCD574DB1FAE65BD00AA0F69 /* Sources */,
 				CCD574DC1FAE65BD00AA0F69 /* Frameworks */,
 				CCD574DD1FAE65BD00AA0F69 /* Resources */,
+				CCDC64BC1FC6B6380057535A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -235,6 +244,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CCDC64BC1FC6B6380057535A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 34547ad060be1db5be19d9eba181b3331841b0d6 896d0bc3446e100f25c7827a58b21bb6be8d2273a6203242f4c9fab54298b147";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CCD574DB1FAE65BD00AA0F69 /* Sources */ = {
@@ -380,6 +405,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7A8KUDWX52;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Ruling Ruler/Resources/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -396,6 +425,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7A8KUDWX52;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Ruling Ruler/Resources/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

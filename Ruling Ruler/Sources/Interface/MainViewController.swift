@@ -86,7 +86,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         // Set new content offset also to table views
-        cmTableView.contentOffset = scrollView.contentOffset
-        inchTableView.contentOffset = scrollView.contentOffset
+        cmTableView.contentOffset.y = scrollView.contentOffset.y
+        inchTableView.contentOffset.y = scrollView.contentOffset.y
     }
 }
