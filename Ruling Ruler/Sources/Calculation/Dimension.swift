@@ -10,7 +10,7 @@ import UIKit
 
 class Dimension {
     /// The number of pixels per inch for this device
-    static let pixelsPerInch: CGFloat? = {
+    static let pixelsPerInch: CGFloat! = {
         switch UIDevice.modelIdentifier {
         case "iPhone4,1":                                fallthrough // iPhone 4S
         case "iPhone5,1", "iPhone5,2":                   fallthrough // iPhone 5
@@ -63,17 +63,4 @@ class Dimension {
 
     /// The number of points per centimeter for this device
     static let pointsPerCentimeter = pixelsPerCentimeter * Sizing.pixel
-}
-
-fileprivate extension UIDevice {
-    // Model identifiers can be found at https://www.theiphonewiki.com/wiki/Models
-    static let modelIdentifier: String = {
-        if let simulatorModelIdentifier = ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] {
-            return simulatorModelIdentifier
-        }
-
-        var sysinfo = utsname()
-        uname(&sysinfo) // ignore return value
-        return String(bytes: Data(bytes: &sysinfo.machine, count: Int(_SYS_NAMELEN)), encoding: .ascii)!.trimmingCharacters(in: .controlCharacters)
-    }()
 }

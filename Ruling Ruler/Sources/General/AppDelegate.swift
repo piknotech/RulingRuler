@@ -25,9 +25,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var rootVc: UIViewController = MainViewController.shared
 
         // Check whether dimensions loadable for device type
-        if Dimension.pixelsPerInch != nil {
+        if Dimension.pixelsPerInch == nil {
             // Set error vc as root vc
             rootVc = ErrorViewController()
+
+            // Report device configuration to Fabric
+            Answers.logCustomEvent(withName: "Unknown device")
+            Answers.logCustomEvent(withName: "Unknown device: \(UIDevice.modelIdentifier)")
         }
 
         // Make visible
