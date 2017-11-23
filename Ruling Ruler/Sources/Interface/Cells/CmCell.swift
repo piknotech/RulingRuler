@@ -14,9 +14,14 @@ class CmCell: UITableViewCell {
 
     var number: Int = 0 {
         didSet {
+            var shouldAdjustForFirstCell = number == 0
+            if #available(iOS 11.0, *) {
+                shouldAdjustForFirstCell = shouldAdjustForFirstCell && MainViewController.shared.view.safeAreaInsets.top < 30
+            }
+
             numberLabel.text = "\(number)"
-            numberLabel.isHidden = number == 0
-            subviews.first { $0.tag == 1 }?.frame.origin.y = number == 0 ? Sizing.pixel : 0
+            numberLabel.isHidden = shouldAdjustForFirstCell
+            subviews.first { $0.tag == 1 }?.frame.origin.y = shouldAdjustForFirstCell ? Sizing.pixel : 0
         }
     }
 
