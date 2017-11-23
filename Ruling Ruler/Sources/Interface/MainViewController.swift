@@ -57,14 +57,16 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
 
         // Configure scroll view
         scrollView.frame = view.bounds
-        let baseImage = #imageLiteral(resourceName: "gradient").resize(to: CGSize(width: view.bounds.width, height: view.bounds.height))
-        let flippedImage = baseImage.flip()
-        let patternImage = UIImage.combined(topImage: baseImage, bottomImage: flippedImage)
-        scrollView.backgroundColor = UIColor(patternImage: patternImage)
         scrollView.decelerationRate = 0.01
         scrollView.showsVerticalScrollIndicator = false
         scrollView.delegate = self
         scrollView.contentSize.height = CGFloat(cmCount) * Dimension.pointsPerCentimeter
+
+        // Configure gradient
+        let baseImage = #imageLiteral(resourceName: "gradient").resize(to: CGSize(width: view.bounds.width, height: 1500))
+        let flippedImage = baseImage.flip()
+        let patternImage = UIImage.combined(topImage: baseImage, bottomImage: flippedImage)
+        scrollView.backgroundColor = UIColor(patternImage: patternImage)
 
         // Create app icon image view
         let appIconImageView = UIImageView(image: UIImage(named: "app_icon"))
