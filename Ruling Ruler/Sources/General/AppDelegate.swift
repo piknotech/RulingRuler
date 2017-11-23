@@ -12,13 +12,10 @@ import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     // MARK: - Internal properties
-
     var window: UIWindow?
 
     // MARK: - Methods
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Setup Fabric
         Fabric.with([Crashlytics.self, Answers.self])
@@ -28,9 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var rootVc: UIViewController = MainViewController.shared
 
         // Check whether dimensions loadable for device type
-        guard Dimension.pixelsPerInch != nil else {
-            rootVc = UIViewController() // TODO: Show error vc
-            return false
+        if Dimension.pixelsPerInch != nil {
+            // Set error vc as root vc
+            rootVc = ErrorViewController()
         }
 
         // Make visible

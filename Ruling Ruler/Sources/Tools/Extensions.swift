@@ -9,7 +9,6 @@
 import UIKit
 
 // MARK: - UIColor
-
 extension UIColor {
     static var background: UIColor {
         return UIColor(red: 250 / 255, green: 189 / 255, blue: 14 / 255, alpha: 1.0)
@@ -17,7 +16,6 @@ extension UIColor {
 }
 
 // MARK: - UIImage
-
 extension UIImage {
     func resize(to targetSize: CGSize) -> UIImage {
         let rect = CGRect(x: 0, y: 0, width: targetSize.width, height: targetSize.height)

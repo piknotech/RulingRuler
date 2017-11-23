@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CC10BFFE1FAE69FB008FF654 /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10BFFD1FAE69FB008FF654 /* Dimension.swift */; };
+		CC6591801FC779D600E53019 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC65917F1FC779D600E53019 /* ErrorViewController.swift */; };
 		CC80930F1FB8EED400D4F726 /* CmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80930E1FB8EED400D4F726 /* CmCell.swift */; };
 		CC8093111FB8EEDD00D4F726 /* InchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8093101FB8EEDD00D4F726 /* InchCell.swift */; };
 		CC8093141FB8F05F00D4F726 /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8093131FB8F05F00D4F726 /* Classes.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		CC10BFFD1FAE69FB008FF654 /* Dimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimension.swift; sourceTree = "<group>"; };
+		CC65917F1FC779D600E53019 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		CC80930E1FB8EED400D4F726 /* CmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CmCell.swift; sourceTree = "<group>"; };
 		CC8093101FB8EEDD00D4F726 /* InchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InchCell.swift; sourceTree = "<group>"; };
 		CC8093131FB8F05F00D4F726 /* Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
@@ -73,8 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				CCD574E41FAE65BD00AA0F69 /* MainViewController.swift */,
-				CC80930D1FB8EEC300D4F726 /* Table View Managers */,
-				CC8093121FB8EEE300D4F726 /* Cells */,
+				CC65917F1FC779D600E53019 /* ErrorViewController.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -163,6 +164,8 @@
 			children = (
 				CC10BFF91FAE6994008FF654 /* General */,
 				CC10BFFA1FAE69A2008FF654 /* Interface */,
+				CC80930D1FB8EEC300D4F726 /* Table View Managers */,
+				CC8093121FB8EEE300D4F726 /* Cells */,
 				CC10BFFF1FAE6C4A008FF654 /* Calculation */,
 				CCE89B181FB8E44A007B65AE /* Tools */,
 			);
@@ -273,6 +276,7 @@
 				CC80930F1FB8EED400D4F726 /* CmCell.swift in Sources */,
 				CCE89B1C1FB8E53E007B65AE /* InchTableViewManager.swift in Sources */,
 				CCE89B171FB8E446007B65AE /* Extensions.swift in Sources */,
+				CC6591801FC779D600E53019 /* ErrorViewController.swift in Sources */,
 				CCE89B1A1FB8E535007B65AE /* CmTableViewManager.swift in Sources */,
 				CC8093141FB8F05F00D4F726 /* Classes.swift in Sources */,
 			);

@@ -9,7 +9,6 @@
 import UIKit
 
 // MARK: - Threading
-
 /// Class simplifying the way to perform blocks in background or in main thread
 class Threading {
     /// Enum representation of the two dispatch types
@@ -43,7 +42,6 @@ class Threading {
 }
 
 // MARK: - Timing
-
 /// Class simplifying the process of executing code after a delay
 class Timing: NSObject {
     /// Performs a given block after a specific delay in a given thread
@@ -58,7 +56,6 @@ class Timing: NSObject {
 }
 
 // MARK: - Sizing
-
 /// Class providing data on screen sizing
 class Sizing {
     /// Returns screen's scale

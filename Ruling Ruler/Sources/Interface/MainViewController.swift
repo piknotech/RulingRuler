@@ -9,9 +9,7 @@
 import UIKit
 
 class MainViewController: UIViewController, UIScrollViewDelegate {
-
     // MARK: - Internal properties
-
     static let shared = MainViewController()
 
     lazy var cmCount: Int = { 254 * countMultiplier }()
@@ -23,7 +21,6 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
     }
 
     // MARK: Private properties
-
     private var scrollView = UIScrollView()
     private var cmTableView = UITableView()
     private var inchTableView = UITableView()
@@ -32,7 +29,6 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
     private let countMultiplier = 4
 
     // MARK: - Methods
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -83,7 +79,6 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
     }
 
     // MARK: UIScrollViewDelegate
-
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         // Set new content offset also to table views
         cmTableView.contentOffset.y = scrollView.contentOffset.y

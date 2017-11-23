@@ -1,5 +1,5 @@
 //
-//  InchTableViewManager.swift
+//  CmTableViewManager.swift
 //  Ruling Ruler
 //
 //  Created by Frederick Pietschmann on 12.11.17.
@@ -8,27 +8,26 @@
 
 import UIKit
 
-class InchTableViewManager: NSObject, UITableViewDelegate, UITableViewDataSource {
+class CmTableViewManager: NSObject, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return MainViewController.shared.inchCount
+        return MainViewController.shared.cmCount
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return Dimension.pointsPerInch
+        return Dimension.pointsPerCentimeter
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let inchCell = tableView.dequeueReusableCell(withIdentifier: "InchCell") {
-            return inchCell
+        if let cmCell = tableView.dequeueReusableCell(withIdentifier: "CmCell") {
+            return cmCell
         }
-        
-        let inchCell = InchCell(style: .default, reuseIdentifier: "InchCell")
-        tableView.register(InchCell.self, forCellReuseIdentifier: "InchCell")
-        return inchCell
+
+        let cmCell = CmCell(style: .default, reuseIdentifier: "CmCell")
+        return cmCell
     }
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if let cmCell = cell as? InchCell {
+        if let cmCell = cell as? CmCell {
             cmCell.number = indexPath.row
         }
     }
