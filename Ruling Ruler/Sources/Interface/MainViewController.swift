@@ -101,7 +101,6 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
         // Adjust for iPhone X
         if #available(iOS 11.0, *) {
             tableViews.forEach { tableView in
-                print(tableView.contentInset.top, view.safeAreaInsets.top)
                 tableView.contentInset.top = view.safeAreaInsets.top
                 tableView.contentInset.bottom = view.safeAreaInsets.bottom
                 tableView.contentInsetAdjustmentBehavior = .never
