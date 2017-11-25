@@ -56,10 +56,10 @@ class Dimension {
     }()
 
     /// The number of pixels per centimeter for this device
-    static let pixelsPerCentimeter = pixelsPerInch! / 2.54
+    static let pixelsPerCentimeter = pixelsPerInch / 2.54
 
     /// The number of points per inch for this device
-    static let pointsPerInch = pixelsPerInch! * Sizing.pixel
+    static let pointsPerInch = pixelsPerInch * Sizing.pixel
 
     /// The number of points per centimeter for this device
     static let pointsPerCentimeter = pixelsPerCentimeter * Sizing.pixel

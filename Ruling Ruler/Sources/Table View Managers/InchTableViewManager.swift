@@ -27,8 +27,8 @@ class InchTableViewManager: NSObject, UITableViewDelegate, UITableViewDataSource
     }
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if let cmCell = cell as? InchCell {
-            cmCell.number = indexPath.row
+        if let inchCell = cell as? InchCell {
+            inchCell.number = indexPath.row
         }
     }
 }

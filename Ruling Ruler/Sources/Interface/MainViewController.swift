@@ -32,18 +32,21 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Use launcher as base view
+        let launchScreen = UIStoryboard(name: "LaunchScreen", bundle: nil).instantiateInitialViewController()!
+        let launchScreenView = launchScreen.view!
+        launchScreenView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.addSubview(launchScreenView)
+
         // Configure table views
-        cmTableView.register(CmCell.self, forCellReuseIdentifier: "CmCell")
-        cmTableView.isUserInteractionEnabled = false
-        cmTableView.separatorStyle = .none
-        cmTableView.backgroundColor = .clear
-        cmTableView.clipsToBounds = false
         cmTableView.frame = CGRect(x: 0, y: 0, width: tableViewWidth, height: view.bounds.size.height)
-        inchTableView.isUserInteractionEnabled = false
-        inchTableView.separatorStyle = .none
-        inchTableView.backgroundColor = .clear
-        inchTableView.clipsToBounds = false
         inchTableView.frame = CGRect(x: view.bounds.size.width - tableViewWidth, y: 0, width: tableViewWidth, height: view.bounds.size.height)
+        [cmTableView, inchTableView].forEach { tableView in
+            tableView.isUserInteractionEnabled = false
+            tableView.separatorStyle = .none
+            tableView.backgroundColor = .clear
+            tableView.clipsToBounds = false
+        }
 
         // Configure table view managers
         cmTableView.dataSource = cmTableViewManager
@@ -53,16 +56,11 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
 
         // Configure scroll view
         scrollView.frame = view.bounds
+        scrollView.backgroundColor = .clear
         scrollView.decelerationRate = 0.01
         scrollView.showsVerticalScrollIndicator = false
         scrollView.delegate = self
         scrollView.contentSize.height = CGFloat(cmCount) * Dimension.pointsPerCentimeter
-
-        // Configure gradient
-        let baseImage = #imageLiteral(resourceName: "gradient").resize(to: CGSize(width: view.bounds.width, height: 1500))
-        let flippedImage = baseImage.flip()
-        let patternImage = UIImage.combined(topImage: baseImage, bottomImage: flippedImage)
-        scrollView.backgroundColor = UIColor(patternImage: patternImage)
 
         // Create app icon image view
         let appIconImageView = UIImageView(image: UIImage(named: "app_icon"))
@@ -81,6 +79,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
     // MARK: UIScrollViewDelegate
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         // Set new content offset also to table views
+        scrollView.contentOffset.y = scrollView.contentOffset.y
         cmTableView.contentOffset.y = scrollView.contentOffset.y
         inchTableView.contentOffset.y = scrollView.contentOffset.y
     }

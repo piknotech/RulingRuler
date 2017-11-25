@@ -23,7 +23,9 @@ class ErrorViewController: UIViewController {
 
         // Use launcher as base view
         let launchScreen = UIStoryboard(name: "LaunchScreen", bundle: nil).instantiateInitialViewController()!
-        view.addSubview(launchScreen.view)
+        let launchScreenView = launchScreen.view!
+        launchScreenView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.addSubview(launchScreenView)
 
         // Add hint label
         hintLabel.textColor = .white
