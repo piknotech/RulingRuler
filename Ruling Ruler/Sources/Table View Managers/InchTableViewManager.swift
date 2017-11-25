@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InchTableViewManager: NSObject, UITableViewDelegate, UITableViewDataSource {
+class InchTableViewManager: ScrollManager, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return MainViewController.shared.inchCount
     }

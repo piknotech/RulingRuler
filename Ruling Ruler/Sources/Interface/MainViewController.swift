@@ -14,21 +14,24 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
 
     lazy var cmCount: Int = { Int(254.0 * countMultiplier) }()
     lazy var inchCount: Int = { Int(100.0 * countMultiplier) }()
-    var tableViewWidth: CGFloat = 50
+    var cellWidth: CGFloat = 50
+    lazy var tableViews: [UITableView] = {
+        return [cmTableView1, cmTableView2, inchTableView1, inchTableView2]
+    }()
 
     override var prefersStatusBarHidden: Bool {
         return true
     }
 
     // MARK: Private properties
+    private let countMultiplier: Double = 1.0
     private var scrollView = UIScrollView()
+    private var cmTableViewManager = CmTableViewManager()
+    private var inchTableViewManager = InchTableViewManager()
     private var cmTableView1 = UITableView()
     private var cmTableView2 = UITableView()
     private var inchTableView1 = UITableView()
     private var inchTableView2 = UITableView()
-    private var cmTableViewManager = CmTableViewManager()
-    private var inchTableViewManager = InchTableViewManager()
-    private let countMultiplier: Double = 1
 
     // MARK: - Methods
     override func viewDidLoad() {
@@ -41,28 +44,12 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
 
         // Create app icon image view
         let appIconImageView = UIImageView(image: UIImage(named: "title_view"))
-        let width = min((view.bounds.width - 2 * tableViewWidth) * 0.5, 400)
+        let width = min((view.bounds.width - 2 * cellWidth) * 0.5, 400)
         appIconImageView.frame.size = CGSize(width: width, height: width)
         appIconImageView.center.x = view.center.x
         appIconImageView.frame.origin.y = 100
         appIconImageView.layer.cornerRadius = appIconImageView.bounds.size.width * 0.2237
         appIconImageView.layer.masksToBounds = true
-
-        // Configure table views
-        [cmTableView1, inchTableView2].forEach { $0.frame = CGRect(x: 0, y: 0, width: tableViewWidth, height: view.bounds.size.height) }
-        [inchTableView1, cmTableView2].forEach { $0.frame = CGRect(x: view.bounds.size.width - tableViewWidth, y: 0, width: tableViewWidth, height: view.bounds.size.height) }
-
-        [cmTableView2, inchTableView2].forEach { $0.alpha = 0 }
-
-        [cmTableView1, cmTableView2].forEach { $0.rowHeight = Dimension.pointsPerCentimeter }
-        [inchTableView1, inchTableView2].forEach { $0.rowHeight = Dimension.pointsPerInch }
-
-        [cmTableView1, cmTableView2, inchTableView1, inchTableView2].forEach { tableView in
-            tableView.isUserInteractionEnabled = false
-            tableView.separatorStyle = .none
-            tableView.backgroundColor = .clear
-            tableView.clipsToBounds = false
-        }
 
         // Configure table view managers
         [cmTableView1, cmTableView2].forEach {
@@ -75,18 +62,25 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
             $0.delegate = inchTableViewManager
         }
 
-        // Configure scroll view
-        scrollView.frame = view.bounds
-        scrollView.backgroundColor = .clear
-        scrollView.decelerationRate = 0.01
-        scrollView.showsVerticalScrollIndicator = false
-        scrollView.delegate = self
-        scrollView.contentSize.height = CGFloat(cmCount) * Dimension.pointsPerCentimeter
+        // Configure table views
+        [cmTableView1, inchTableView2].forEach { $0.frame = CGRect(x: 0, y: 0, width: view.bounds.width / 2, height: view.bounds.size.height) }
+        [inchTableView1, cmTableView2].forEach { $0.frame = CGRect(x: view.bounds.width / 2, y: 0, width: view.bounds.width / 2, height: view.bounds.size.height) }
+
+        [cmTableView2, inchTableView2].forEach { $0.alpha = 0 }
+
+        [cmTableView1, cmTableView2].forEach { $0.rowHeight = Dimension.pointsPerCentimeter }
+        [inchTableView1, inchTableView2].forEach { $0.rowHeight = Dimension.pointsPerInch }
+
+        tableViews.forEach { tableView in
+            tableView.showsVerticalScrollIndicator = false
+            tableView.allowsSelection = false
+            tableView.separatorStyle = .none
+            tableView.backgroundColor = .clear
+        }
 
         // Add views
         view.addSubview(launchScreenView)
         view.addSubview(appIconImageView)
-        view.addSubview(scrollView)
         view.addSubview(cmTableView1)
         view.addSubview(cmTableView2)
         view.addSubview(inchTableView1)
@@ -106,16 +100,6 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
             [self.cmTableView2, self.inchTableView2].forEach { $0.alpha = isFirstViewMode ? 1 : 0 }
         }) { _ in
             UIApplication.shared.endIgnoringInteractionEvents()
-        }
-    }
-
-    // MARK: UIScrollViewDelegate
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        // Set new content offset also to table views
-        [cmTableView1, cmTableView2, inchTableView1, inchTableView2].forEach { tableView in
-            tableView.contentOffset.y = scrollView.contentOffset.y
-            //print(tableView.visibleCells)
-            tableView.visibleCells.forEach { $0.layoutIfNeeded() }
         }
     }
 }

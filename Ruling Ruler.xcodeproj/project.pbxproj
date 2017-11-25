@@ -12,6 +12,7 @@
 		CC8093111FB8EEDD00D4F726 /* UnitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8093101FB8EEDD00D4F726 /* UnitCell.swift */; };
 		CC8093141FB8F05F00D4F726 /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8093131FB8F05F00D4F726 /* Classes.swift */; };
 		CC8784971FC9F52F002FF1A1 /* CellMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8784961FC9F52F002FF1A1 /* CellMode.swift */; };
+		CC8784991FCA0215002FF1A1 /* ScrollManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8784981FCA0215002FF1A1 /* ScrollManager.swift */; };
 		CCD574E31FAE65BD00AA0F69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD574E21FAE65BD00AA0F69 /* AppDelegate.swift */; };
 		CCD574E51FAE65BD00AA0F69 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD574E41FAE65BD00AA0F69 /* MainViewController.swift */; };
 		CCD574EA1FAE65BD00AA0F69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCD574E91FAE65BD00AA0F69 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		CC8093101FB8EEDD00D4F726 /* UnitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitCell.swift; sourceTree = "<group>"; };
 		CC8093131FB8F05F00D4F726 /* Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
 		CC8784961FC9F52F002FF1A1 /* CellMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellMode.swift; sourceTree = "<group>"; };
+		CC8784981FCA0215002FF1A1 /* ScrollManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollManager.swift; sourceTree = "<group>"; };
 		CCD574DF1FAE65BD00AA0F69 /* Ruling Ruler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ruling Ruler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCD574E21FAE65BD00AA0F69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCD574E41FAE65BD00AA0F69 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 		CC80930D1FB8EEC300D4F726 /* Table View Managers */ = {
 			isa = PBXGroup;
 			children = (
+				CC8784981FCA0215002FF1A1 /* ScrollManager.swift */,
 				CCE89B191FB8E535007B65AE /* CmTableViewManager.swift */,
 				CCE89B1B1FB8E53E007B65AE /* InchTableViewManager.swift */,
 			);
@@ -270,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCD574E51FAE65BD00AA0F69 /* MainViewController.swift in Sources */,
+				CC8784991FCA0215002FF1A1 /* ScrollManager.swift in Sources */,
 				CC10BFFE1FAE69FB008FF654 /* Dimension.swift in Sources */,
 				CCD574E31FAE65BD00AA0F69 /* AppDelegate.swift in Sources */,
 				CC8093111FB8EEDD00D4F726 /* UnitCell.swift in Sources */,
@@ -408,6 +412,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 7A8KUDWX52;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

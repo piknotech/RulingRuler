@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CmTableViewManager: NSObject, UITableViewDelegate, UITableViewDataSource {
+class CmTableViewManager: ScrollManager, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return MainViewController.shared.cmCount
     }

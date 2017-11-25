@@ -36,7 +36,8 @@ class UnitCell: UITableViewCell {
         backgroundColor = .clear
 
         // Create subviews
-        let cellSize = CGSize(width: MainViewController.shared.tableViewWidth, height: mode == .inch ? Dimension.pointsPerInch : Dimension.pointsPerCentimeter)
+        let cellSize = CGSize(width: MainViewController.shared.cellWidth, height: mode == .inch ? Dimension.pointsPerInch : Dimension.pointsPerCentimeter)
+
         let maxIndex = mode == .inch ? 16 : 10
         (0..<maxIndex).forEach {
             var width = $0 == 0 ? cellSize.width : $0 == 8 ? cellSize.width * 2 / 3 : $0 % 4 == 0 ? cellSize.width / 2 : $0 % 2 == 0 ? cellSize.width / 3 : cellSize.width / 5
@@ -45,7 +46,7 @@ class UnitCell: UITableViewCell {
             }
 
             let y = (cellSize.height * CGFloat($0) / CGFloat(maxIndex)) - Sizing.pixel
-            let view = UIView(frame: CGRect(x: viewMode == .left ? 0 : cellSize.width - width, y: y, width: width, height: 2 * Sizing.pixel))
+            let view = UIView(frame: CGRect(x: viewMode == .left ? 0 : MainViewController.shared.view.bounds.width / 2 - width, y: y, width: width, height: 2 * Sizing.pixel))
             view.tag = $0 == 0 ? 1 : 0
             view.backgroundColor = .white
 
@@ -53,7 +54,7 @@ class UnitCell: UITableViewCell {
         }
 
         // Add number label
-        numberLabel.frame = CGRect(x: viewMode == .left ? cellSize.width : -50, y: -cellSize.height / 2, width: 50, height: cellSize.height)
+        numberLabel.frame = CGRect(x: viewMode == .left ? cellSize.width : MainViewController.shared.view.bounds.width / 2 - cellSize.width - 50, y: -cellSize.height / 2, width: 50, height: cellSize.height)
         numberLabel.textColor = .white
         numberLabel.textAlignment = .center
         clipsToBounds = false
