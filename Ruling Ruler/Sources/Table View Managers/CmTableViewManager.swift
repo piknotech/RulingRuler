@@ -18,12 +18,12 @@ class CmTableViewManager: NSObject, UITableViewDelegate, UITableViewDataSource {
             return cmCell
         }
 
-        let cmCell = CmCell(style: .default, reuseIdentifier: "CmCell")
+        let cmCell = UnitCell(mode: .cm, viewMode: tableView.frame.origin.x == 0 ? .left : .right, reuseIdentifier: "CmCell")
         return cmCell
     }
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if let cmCell = cell as? CmCell {
+        if let cmCell = cell as? UnitCell {
             cmCell.number = indexPath.row
         }
     }

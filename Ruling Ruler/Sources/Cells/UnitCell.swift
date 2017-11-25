@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InchCell: UITableViewCell {
+class UnitCell: UITableViewCell {
     // MARK: - Internal properties
     var number: Int = 0 {
         didSet {
@@ -27,20 +27,25 @@ class InchCell: UITableViewCell {
     var numberLabel: UILabel
 
     // MARK: - Initializers
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    init(mode: CellMode, viewMode: CellViewMode, reuseIdentifier: String?) {
         numberLabel = UILabel()
 
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        super.init(style: .default, reuseIdentifier: reuseIdentifier)
 
         // Set background color
         backgroundColor = .clear
 
         // Create subviews
-        let cellSize = CGSize(width: MainViewController.shared.tableViewWidth, height: Dimension.pointsPerInch)
-        (0..<16).forEach {
-            let width = $0 == 0 ? cellSize.width : $0 == 8 ? cellSize.width * 2 / 3 : $0 % 4 == 0 ? cellSize.width / 2 : $0 % 2 == 0 ? cellSize.width / 3 : cellSize.width / 5
-            let y = (cellSize.height * CGFloat($0) / 16) - Sizing.pixel
-            let view = UIView(frame: CGRect(x: cellSize.width - width, y: y, width: width, height: 2 * Sizing.pixel))
+        let cellSize = CGSize(width: MainViewController.shared.tableViewWidth, height: mode == .inch ? Dimension.pointsPerInch : Dimension.pointsPerCentimeter)
+        let maxIndex = mode == .inch ? 16 : 10
+        (0..<maxIndex).forEach {
+            var width = $0 == 0 ? cellSize.width : $0 == 8 ? cellSize.width * 2 / 3 : $0 % 4 == 0 ? cellSize.width / 2 : $0 % 2 == 0 ? cellSize.width / 3 : cellSize.width / 5
+            if mode == .cm {
+                width = $0 == 0 ? cellSize.width : $0 == 5 ? cellSize.width * 2 / 3 : cellSize.width / 3
+            }
+
+            let y = (cellSize.height * CGFloat($0) / CGFloat(maxIndex)) - Sizing.pixel
+            let view = UIView(frame: CGRect(x: viewMode == .left ? 0 : cellSize.width - width, y: y, width: width, height: 2 * Sizing.pixel))
             view.tag = $0 == 0 ? 1 : 0
             view.backgroundColor = .white
 
@@ -48,7 +53,7 @@ class InchCell: UITableViewCell {
         }
 
         // Add number label
-        numberLabel.frame = CGRect(x: -50, y: -cellSize.height/2, width: 50, height: cellSize.height)
+        numberLabel.frame = CGRect(x: viewMode == .left ? cellSize.width : -50, y: -cellSize.height / 2, width: 50, height: cellSize.height)
         numberLabel.textColor = .white
         numberLabel.textAlignment = .center
         clipsToBounds = false

@@ -18,12 +18,12 @@ class InchTableViewManager: NSObject, UITableViewDelegate, UITableViewDataSource
             return inchCell
         }
         
-        let inchCell = InchCell(style: .default, reuseIdentifier: "InchCell")
+        let inchCell = UnitCell(mode: .inch, viewMode: tableView.frame.origin.x == 0 ? .left : .right, reuseIdentifier: "InchCell")
         return inchCell
     }
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if let inchCell = cell as? InchCell {
+        if let inchCell = cell as? UnitCell {
             inchCell.number = indexPath.row
         }
     }

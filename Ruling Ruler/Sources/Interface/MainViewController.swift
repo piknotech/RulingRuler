@@ -12,8 +12,8 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
     // MARK: - Internal properties
     static let shared = MainViewController()
 
-    lazy var cmCount: Int = { 254 * countMultiplier }()
-    lazy var inchCount: Int = { 100 * countMultiplier }()
+    lazy var cmCount: Int = { Int(254.0 * countMultiplier) }()
+    lazy var inchCount: Int = { Int(100.0 * countMultiplier) }()
     var tableViewWidth: CGFloat = 50
 
     override var prefersStatusBarHidden: Bool {
@@ -28,7 +28,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
     private var inchTableView2 = UITableView()
     private var cmTableViewManager = CmTableViewManager()
     private var inchTableViewManager = InchTableViewManager()
-    private let countMultiplier = 1
+    private let countMultiplier: Double = 1
 
     // MARK: - Methods
     override func viewDidLoad() {
@@ -100,7 +100,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
     @objc
     func switchSides() {
         UIApplication.shared.beginIgnoringInteractionEvents()
-        UIView.animate(withDuration: 0.5, animations: {
+        UIView.animate(withDuration: 0.2, animations: {
             let isFirstViewMode = self.cmTableView1.alpha == 1
             [self.cmTableView1, self.inchTableView1].forEach { $0.alpha = isFirstViewMode ? 0 : 1 }
             [self.cmTableView2, self.inchTableView2].forEach { $0.alpha = isFirstViewMode ? 1 : 0 }
@@ -114,6 +114,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
         // Set new content offset also to table views
         [cmTableView1, cmTableView2, inchTableView1, inchTableView2].forEach { tableView in
             tableView.contentOffset.y = scrollView.contentOffset.y
+            //print(tableView.visibleCells)
             tableView.visibleCells.forEach { $0.layoutIfNeeded() }
         }
     }

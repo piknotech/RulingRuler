@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		CC10BFFE1FAE69FB008FF654 /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10BFFD1FAE69FB008FF654 /* Dimension.swift */; };
 		CC6591801FC779D600E53019 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC65917F1FC779D600E53019 /* ErrorViewController.swift */; };
-		CC80930F1FB8EED400D4F726 /* CmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80930E1FB8EED400D4F726 /* CmCell.swift */; };
-		CC8093111FB8EEDD00D4F726 /* InchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8093101FB8EEDD00D4F726 /* InchCell.swift */; };
+		CC8093111FB8EEDD00D4F726 /* UnitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8093101FB8EEDD00D4F726 /* UnitCell.swift */; };
 		CC8093141FB8F05F00D4F726 /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8093131FB8F05F00D4F726 /* Classes.swift */; };
+		CC8784971FC9F52F002FF1A1 /* CellMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8784961FC9F52F002FF1A1 /* CellMode.swift */; };
 		CCD574E31FAE65BD00AA0F69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD574E21FAE65BD00AA0F69 /* AppDelegate.swift */; };
 		CCD574E51FAE65BD00AA0F69 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD574E41FAE65BD00AA0F69 /* MainViewController.swift */; };
 		CCD574EA1FAE65BD00AA0F69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCD574E91FAE65BD00AA0F69 /* Assets.xcassets */; };
@@ -26,9 +26,9 @@
 /* Begin PBXFileReference section */
 		CC10BFFD1FAE69FB008FF654 /* Dimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimension.swift; sourceTree = "<group>"; };
 		CC65917F1FC779D600E53019 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
-		CC80930E1FB8EED400D4F726 /* CmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CmCell.swift; sourceTree = "<group>"; };
-		CC8093101FB8EEDD00D4F726 /* InchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InchCell.swift; sourceTree = "<group>"; };
+		CC8093101FB8EEDD00D4F726 /* UnitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitCell.swift; sourceTree = "<group>"; };
 		CC8093131FB8F05F00D4F726 /* Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
+		CC8784961FC9F52F002FF1A1 /* CellMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellMode.swift; sourceTree = "<group>"; };
 		CCD574DF1FAE65BD00AA0F69 /* Ruling Ruler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ruling Ruler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCD574E21FAE65BD00AA0F69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCD574E41FAE65BD00AA0F69 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -118,8 +118,8 @@
 		CC8093121FB8EEE300D4F726 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				CC80930E1FB8EED400D4F726 /* CmCell.swift */,
-				CC8093101FB8EEDD00D4F726 /* InchCell.swift */,
+				CC8784961FC9F52F002FF1A1 /* CellMode.swift */,
+				CC8093101FB8EEDD00D4F726 /* UnitCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -272,8 +272,8 @@
 				CCD574E51FAE65BD00AA0F69 /* MainViewController.swift in Sources */,
 				CC10BFFE1FAE69FB008FF654 /* Dimension.swift in Sources */,
 				CCD574E31FAE65BD00AA0F69 /* AppDelegate.swift in Sources */,
-				CC8093111FB8EEDD00D4F726 /* InchCell.swift in Sources */,
-				CC80930F1FB8EED400D4F726 /* CmCell.swift in Sources */,
+				CC8093111FB8EEDD00D4F726 /* UnitCell.swift in Sources */,
+				CC8784971FC9F52F002FF1A1 /* CellMode.swift in Sources */,
 				CCE89B1C1FB8E53E007B65AE /* InchTableViewManager.swift in Sources */,
 				CCE89B171FB8E446007B65AE /* Extensions.swift in Sources */,
 				CC6591801FC779D600E53019 /* ErrorViewController.swift in Sources */,
