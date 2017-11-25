@@ -23,6 +23,10 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
         return true
     }
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     // MARK: Private properties
     private let countMultiplier: Double = 1.0
     private var scrollView = UIScrollView()
@@ -89,6 +93,20 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
         // Add gesture recognizer
         let tap = UITapGestureRecognizer(target: self, action: #selector(switchSides))
         view.addGestureRecognizer(tap)
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        // Adjust for iPhone X
+        if #available(iOS 11.0, *) {
+            tableViews.forEach { tableView in
+                print(tableView.contentInset.top, view.safeAreaInsets.top)
+                tableView.contentInset.top = view.safeAreaInsets.top
+                tableView.contentInset.bottom = view.safeAreaInsets.bottom
+                tableView.contentInsetAdjustmentBehavior = .never
+            }
+        }
     }
 
     @objc

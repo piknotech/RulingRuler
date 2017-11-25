@@ -14,6 +14,10 @@ class ErrorViewController: UIViewController {
         return true
     }
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     // MARK: Private properties
     private var hintLabel = UILabel()
 
