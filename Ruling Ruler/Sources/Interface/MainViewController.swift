@@ -26,16 +26,25 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
     private var inchTableView = UITableView()
     private var cmTableViewManager = CmTableViewManager()
     private var inchTableViewManager = InchTableViewManager()
-    private let countMultiplier = 4
+    private let countMultiplier = 1
 
     // MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Use launcher as base view
+        // Get launcher view
         let launchScreen = UIStoryboard(name: "LaunchScreen", bundle: nil).instantiateInitialViewController()!
         let launchScreenView = launchScreen.view!
         launchScreenView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+
+        // Create app icon image view
+        let appIconImageView = UIImageView(image: UIImage(named: "title_view"))
+        let width = min((view.bounds.width - 2 * tableViewWidth) * 0.5, 400)
+        appIconImageView.frame.size = CGSize(width: width, height: width)
+        appIconImageView.center.x = view.center.x
+        appIconImageView.frame.origin.y = 100
+        appIconImageView.layer.cornerRadius = appIconImageView.bounds.size.width * 0.2237
+        appIconImageView.layer.masksToBounds = true
 
         // Configure table views
         cmTableView.frame = CGRect(x: 0, y: 0, width: tableViewWidth, height: view.bounds.size.height)
@@ -61,13 +70,6 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
         scrollView.delegate = self
         scrollView.contentSize.height = CGFloat(cmCount) * Dimension.pointsPerCentimeter
 
-        // Create app icon image view
-        let appIconImageView = UIImageView(image: UIImage(named: "app_icon"))
-        appIconImageView.frame.size = CGSize(width: 80, height: 80)
-        appIconImageView.center = CGPoint(x: scrollView.center.x, y: 150)
-        appIconImageView.layer.cornerRadius = appIconImageView.bounds.size.width * 0.2237
-        appIconImageView.layer.masksToBounds = true
-
         // Add views
         view.addSubview(launchScreenView)
         view.addSubview(appIconImageView)
@@ -79,7 +81,6 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
     // MARK: UIScrollViewDelegate
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         // Set new content offset also to table views
-        scrollView.contentOffset.y = scrollView.contentOffset.y
         cmTableView.contentOffset.y = scrollView.contentOffset.y
         inchTableView.contentOffset.y = scrollView.contentOffset.y
     }
