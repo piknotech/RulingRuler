@@ -36,7 +36,6 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
         let launchScreen = UIStoryboard(name: "LaunchScreen", bundle: nil).instantiateInitialViewController()!
         let launchScreenView = launchScreen.view!
         launchScreenView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        view.addSubview(launchScreenView)
 
         // Configure table views
         cmTableView.frame = CGRect(x: 0, y: 0, width: tableViewWidth, height: view.bounds.size.height)
@@ -70,7 +69,8 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
         appIconImageView.layer.masksToBounds = true
 
         // Add views
-        scrollView.addSubview(appIconImageView)
+        view.addSubview(launchScreenView)
+        view.addSubview(appIconImageView)
         view.addSubview(scrollView)
         view.addSubview(cmTableView)
         view.addSubview(inchTableView)
