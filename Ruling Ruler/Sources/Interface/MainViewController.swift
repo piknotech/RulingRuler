@@ -49,6 +49,8 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
         // Configure table views
         cmTableView.frame = CGRect(x: 0, y: 0, width: tableViewWidth, height: view.bounds.size.height)
         inchTableView.frame = CGRect(x: view.bounds.size.width - tableViewWidth, y: 0, width: tableViewWidth, height: view.bounds.size.height)
+        cmTableView.rowHeight = Dimension.pointsPerCentimeter
+        inchTableView.rowHeight = Dimension.pointsPerInch
         [cmTableView, inchTableView].forEach { tableView in
             tableView.isUserInteractionEnabled = false
             tableView.separatorStyle = .none
@@ -83,5 +85,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
         // Set new content offset also to table views
         cmTableView.contentOffset.y = scrollView.contentOffset.y
         inchTableView.contentOffset.y = scrollView.contentOffset.y
+        cmTableView.visibleCells.forEach { $0.layoutIfNeeded() }
+        inchTableView.visibleCells.forEach { $0.layoutIfNeeded() }
     }
 }

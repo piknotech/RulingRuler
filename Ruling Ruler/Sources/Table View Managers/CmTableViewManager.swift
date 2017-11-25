@@ -12,11 +12,7 @@ class CmTableViewManager: NSObject, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return MainViewController.shared.cmCount
     }
-
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return Dimension.pointsPerCentimeter
-    }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cmCell = tableView.dequeueReusableCell(withIdentifier: "CmCell") {
             return cmCell

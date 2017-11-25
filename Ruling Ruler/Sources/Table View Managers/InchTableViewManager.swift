@@ -13,10 +13,6 @@ class InchTableViewManager: NSObject, UITableViewDelegate, UITableViewDataSource
         return MainViewController.shared.inchCount
     }
 
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return Dimension.pointsPerInch
-    }
-
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let inchCell = tableView.dequeueReusableCell(withIdentifier: "InchCell") {
             return inchCell
