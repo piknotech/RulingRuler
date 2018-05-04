@@ -8,7 +8,7 @@
 
 import Crashlytics
 import Fabric
-import UIKit
+import Foundation
 
 final class FabricManager {
     // MARK: - Subtypes
@@ -51,7 +51,7 @@ final class FabricManager {
     // MARK: Logging Helpers
     private func logUnknownDevice() {
         Answers.logCustomEvent(withName: "Unknown device")
-        Answers.logCustomEvent(withName: "Unknown device: \(UIDevice.modelIdentifier)")
+        Answers.logCustomEvent(withName: "Unknown device: \(DeviceInfo.modelIdentifier)")
     }
 
     private func logSidesSwitched() {

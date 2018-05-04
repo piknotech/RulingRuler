@@ -12,9 +12,13 @@ import UIKit
 // swiftlint:disable all
 
 struct DimensionInfo {
+    // MARK: - Initializers
+    private init() { }
+
+    // MARK: - Properties
     /// The number of pixels per inch for this device
     static let pixelsPerInch: CGFloat! = {
-        switch UIDevice.modelIdentifier {
+        switch DeviceInfo.modelIdentifier {
         case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":             // iPad 2
             return 132
 

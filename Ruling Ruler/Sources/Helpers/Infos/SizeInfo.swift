@@ -9,6 +9,10 @@
 import UIKit
 
 struct SizeInfo {
+    // MARK: - Initializers
+    private init() { }
+
+    // MARK: - Properties
     /// Returns screen's scale
     static var scale: CGFloat {
         return UIScreen.main.scale

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CC10BFFE1FAE69FB008FF654 /* DimensionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10BFFD1FAE69FB008FF654 /* DimensionInfo.swift */; };
+		CC4088A7209C9BE70001960A /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4088A6209C9BE70001960A /* DeviceInfo.swift */; };
 		CC56A6DE2083B3E6007C9DB2 /* ScreenshotManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC56A6DD2083B3E6007C9DB2 /* ScreenshotManager.swift */; };
 		CC6591801FC779D600E53019 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC65917F1FC779D600E53019 /* ErrorViewController.swift */; };
 		CC8093111FB8EEDD00D4F726 /* UnitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8093101FB8EEDD00D4F726 /* UnitCell.swift */; };
@@ -22,11 +23,9 @@
 		CCD995A3209C919E00D8FFE5 /* TutorialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD995A2209C919E00D8FFE5 /* TutorialManager.swift */; };
 		CCDC64BF1FC6B64A0057535A /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCDC64BD1FC6B64A0057535A /* Crashlytics.framework */; };
 		CCDC64C01FC6B64A0057535A /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCDC64BE1FC6B64A0057535A /* Fabric.framework */; };
-		CCE89B171FB8E446007B65AE /* UIDeviceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE89B161FB8E446007B65AE /* UIDeviceExtensions.swift */; };
 		CCE89B1A1FB8E535007B65AE /* CmTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE89B191FB8E535007B65AE /* CmTableViewManager.swift */; };
 		CCE89B1C1FB8E53E007B65AE /* InchTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE89B1B1FB8E53E007B65AE /* InchTableViewManager.swift */; };
 		CCFD315620387104003AE19F /* VersionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFD315520387104003AE19F /* VersionInfo.swift */; };
-		CCFD315820387124003AE19F /* InstallationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFD315720387124003AE19F /* InstallationInfo.swift */; };
 		CCFD315A20387161003AE19F /* SizeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFD315920387161003AE19F /* SizeInfo.swift */; };
 		CCFD315C203872C8003AE19F /* InstallationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFD315B203872C8003AE19F /* InstallationManager.swift */; };
 /* End PBXBuildFile section */
@@ -37,6 +36,7 @@
 		CC4088A2209C9AA70001960A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CC4088A4209C9AE70001960A /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		CC4088A5209C9AF00001960A /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		CC4088A6209C9BE70001960A /* DeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
 		CC56A6DD2083B3E6007C9DB2 /* ScreenshotManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotManager.swift; sourceTree = "<group>"; };
 		CC65917F1FC779D600E53019 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		CC8093101FB8EEDD00D4F726 /* UnitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitCell.swift; sourceTree = "<group>"; };
@@ -54,11 +54,9 @@
 		CCD995A2209C919E00D8FFE5 /* TutorialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialManager.swift; sourceTree = "<group>"; };
 		CCDC64BD1FC6B64A0057535A /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
 		CCDC64BE1FC6B64A0057535A /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
-		CCE89B161FB8E446007B65AE /* UIDeviceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtensions.swift; sourceTree = "<group>"; };
 		CCE89B191FB8E535007B65AE /* CmTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CmTableViewManager.swift; sourceTree = "<group>"; };
 		CCE89B1B1FB8E53E007B65AE /* InchTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InchTableViewManager.swift; sourceTree = "<group>"; };
 		CCFD315520387104003AE19F /* VersionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionInfo.swift; sourceTree = "<group>"; };
-		CCFD315720387124003AE19F /* InstallationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationInfo.swift; sourceTree = "<group>"; };
 		CCFD315920387161003AE19F /* SizeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeInfo.swift; sourceTree = "<group>"; };
 		CCFD315B203872C8003AE19F /* InstallationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,12 +122,13 @@
 			name = "Root Files";
 			sourceTree = "<group>";
 		};
-		CC59C89D2038D5C800038A84 /* Extensions */ = {
+		CC4088AA209C9F180001960A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				CCE89B161FB8E446007B65AE /* UIDeviceExtensions.swift */,
+				CCC392E420023CA90050DFB9 /* Managers */,
+				CCE89B181FB8E44A007B65AE /* Infos */,
 			);
-			path = Extensions;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		CC80930D1FB8EEC300D4F726 /* Table View Managers */ = {
@@ -205,22 +204,20 @@
 				CC10BFFA1FAE69A2008FF654 /* Interface */,
 				CC80930D1FB8EEC300D4F726 /* Table View Managers */,
 				CC8093121FB8EEE300D4F726 /* Cells */,
-				CCC392E420023CA90050DFB9 /* Managers */,
-				CCE89B181FB8E44A007B65AE /* Info */,
-				CC59C89D2038D5C800038A84 /* Extensions */,
+				CC4088AA209C9F180001960A /* Helpers */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		CCE89B181FB8E44A007B65AE /* Info */ = {
+		CCE89B181FB8E44A007B65AE /* Infos */ = {
 			isa = PBXGroup;
 			children = (
+				CC4088A6209C9BE70001960A /* DeviceInfo.swift */,
 				CC10BFFD1FAE69FB008FF654 /* DimensionInfo.swift */,
-				CCFD315720387124003AE19F /* InstallationInfo.swift */,
 				CCFD315920387161003AE19F /* SizeInfo.swift */,
 				CCFD315520387104003AE19F /* VersionInfo.swift */,
 			);
-			path = Info;
+			path = Infos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,15 +330,14 @@
 				CCD574E51FAE65BD00AA0F69 /* MainViewController.swift in Sources */,
 				CCFD315620387104003AE19F /* VersionInfo.swift in Sources */,
 				CC10BFFE1FAE69FB008FF654 /* DimensionInfo.swift in Sources */,
+				CC4088A7209C9BE70001960A /* DeviceInfo.swift in Sources */,
 				CCFD315A20387161003AE19F /* SizeInfo.swift in Sources */,
 				CCD574E31FAE65BD00AA0F69 /* AppDelegate.swift in Sources */,
 				CC8093111FB8EEDD00D4F726 /* UnitCell.swift in Sources */,
 				CCFD315C203872C8003AE19F /* InstallationManager.swift in Sources */,
 				CC8784971FC9F52F002FF1A1 /* CellMode.swift in Sources */,
 				CCE89B1C1FB8E53E007B65AE /* InchTableViewManager.swift in Sources */,
-				CCE89B171FB8E446007B65AE /* UIDeviceExtensions.swift in Sources */,
 				CC56A6DE2083B3E6007C9DB2 /* ScreenshotManager.swift in Sources */,
-				CCFD315820387124003AE19F /* InstallationInfo.swift in Sources */,
 				CC6591801FC779D600E53019 /* ErrorViewController.swift in Sources */,
 				CCE89B1A1FB8E535007B65AE /* CmTableViewManager.swift in Sources */,
 				CCD995A3209C919E00D8FFE5 /* TutorialManager.swift in Sources */,
