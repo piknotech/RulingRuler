@@ -69,11 +69,17 @@ final class ScreenshotManager {
     private func setup(for configuration: Configuration) {
         let mainVc = MainViewController.shared
 
+        // Adjust for iPhone X
+        var safeAreaAdjustment: CGFloat = 0
+        if #available(iOS 11.0, *) {
+            safeAreaAdjustment = mainVc.view.safeAreaInsets.top
+        }
+
         // Manage scroll position
         // Only when animating, all other cells on the path to the needed cell are calculated.
         // If not animated, other cells are too small & thereby position is inaccurate
         mainVc.scrollTableViews(
-            to: configuration.topCm * DimensionInfo.pointsPerCentimeter,
+            to: configuration.topCm * DimensionInfo.pointsPerCentimeter - safeAreaAdjustment,
             animated: true
         )
 
