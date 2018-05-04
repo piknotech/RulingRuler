@@ -80,13 +80,13 @@
 			path = "Launch Screen";
 			sourceTree = "<group>";
 		};
-		CC10BFFA1FAE69A2008FF654 /* Interface */ = {
+		CC10BFFA1FAE69A2008FF654 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				CCD574E41FAE65BD00AA0F69 /* MainViewController.swift */,
 				CC65917F1FC779D600E53019 /* ErrorViewController.swift */,
 			);
-			path = Interface;
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		CC10BFFB1FAE69AF008FF654 /* Assets */ = {
@@ -129,21 +129,14 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		CC80930D1FB8EEC300D4F726 /* Table View Managers */ = {
-			isa = PBXGroup;
-			children = (
-				CCE89B191FB8E535007B65AE /* CmTableViewManager.swift */,
-				CCE89B1B1FB8E53E007B65AE /* InchTableViewManager.swift */,
-			);
-			path = "Table View Managers";
-			sourceTree = "<group>";
-		};
-		CC8093121FB8EEE300D4F726 /* Cell */ = {
+		CC80930D1FB8EEC300D4F726 /* Table View */ = {
 			isa = PBXGroup;
 			children = (
 				CC8093101FB8EEDD00D4F726 /* UnitCell.swift */,
+				CCE89B191FB8E535007B65AE /* CmTableViewManager.swift */,
+				CCE89B1B1FB8E53E007B65AE /* InchTableViewManager.swift */,
 			);
-			path = Cell;
+			path = "Table View";
 			sourceTree = "<group>";
 		};
 		CCC392E420023CA90050DFB9 /* Managers */ = {
@@ -198,9 +191,8 @@
 			isa = PBXGroup;
 			children = (
 				CCD574E21FAE65BD00AA0F69 /* AppDelegate.swift */,
-				CC10BFFA1FAE69A2008FF654 /* Interface */,
-				CC80930D1FB8EEC300D4F726 /* Table View Managers */,
-				CC8093121FB8EEE300D4F726 /* Cell */,
+				CC10BFFA1FAE69A2008FF654 /* View Controllers */,
+				CC80930D1FB8EEC300D4F726 /* Table View */,
 				CC4088AA209C9F180001960A /* Helpers */,
 			);
 			path = Sources;
