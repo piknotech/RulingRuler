@@ -12,7 +12,6 @@
 		CC56A6DE2083B3E6007C9DB2 /* ScreenshotManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC56A6DD2083B3E6007C9DB2 /* ScreenshotManager.swift */; };
 		CC6591801FC779D600E53019 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC65917F1FC779D600E53019 /* ErrorViewController.swift */; };
 		CC8093111FB8EEDD00D4F726 /* UnitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8093101FB8EEDD00D4F726 /* UnitCell.swift */; };
-		CCB594342098944E00FE72C2 /* fabric.apikey in Resources */ = {isa = PBXBuildFile; fileRef = CCB594332098944E00FE72C2 /* fabric.apikey */; };
 		CCB594382098BB7A00FE72C2 /* FabricManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB594372098BB7A00FE72C2 /* FabricManager.swift */; };
 		CCC392E320023C9E0050DFB9 /* AppReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC392E220023C9E0050DFB9 /* AppReviewManager.swift */; };
 		CCD574E31FAE65BD00AA0F69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD574E21FAE65BD00AA0F69 /* AppDelegate.swift */; };
@@ -270,7 +269,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCB594342098944E00FE72C2 /* fabric.apikey in Resources */,
 				CCD574ED1FAE65BD00AA0F69 /* LaunchScreen.storyboard in Resources */,
 				CCD574EA1FAE65BD00AA0F69 /* Assets.xcassets in Resources */,
 			);
@@ -295,7 +293,7 @@
 		};
 		CCDC64BC1FC6B6380057535A /* Fabric */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -303,9 +301,9 @@
 			name = Fabric;
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "FABRIC_APIKEY_FILE=\"${SRCROOT}/fabric.apikey\"\nFABRIC_BUILDSECRET_FILE=\"${SRCROOT}/fabric.buildsecret\"\n\nif test ! -f \"$FABRIC_APIKEY_FILE\" -o ! -f \"$FABRIC_BUILDSECRET_FILE\"; then\n    echo \"warning: To get Fabric to work, add top-level fabric.apikey & fabric.buildsecret files. Also make sure fabric.apikey has & fabric.buildsecret doesn't have target membership.\"\nelse\n    FABRIC_APIKEY=$(cat \"$FABRIC_APIKEY_FILE\")\n    if test $? -ne 0; then\n        echo \"error: Cannot read $FABRIC_APIKEY_FILE\"\n        exit 1\n    fi\n\n    FABRIC_BUILDSECRET=$(cat \"$FABRIC_BUILDSECRET_FILE\")\n    if test $? -ne 0; then\n        echo \"error: Cannot read $FABRIC_BUILDSECRET_FILE\"\n        exit 1\n    fi\n\n    echo \"Uploading dSYM files to Crashlytics\"\n    ./Fabric.framework/run \"$FABRIC_APIKEY\" \"$FABRIC_BUILDSECRET\"\nfi";
+			shellScript = "FABRIC_APIKEY_FILE=\"${SRCROOT}/fabric.apikey\"\nFABRIC_BUILDSECRET_FILE=\"${SRCROOT}/fabric.buildsecret\"\n\nif test ! -f \"$FABRIC_APIKEY_FILE\" -o ! -f \"$FABRIC_BUILDSECRET_FILE\"; then\n    echo \"warning: To get Fabric to work for a release, add top-level fabric.apikey & fabric.buildsecret files. Also make sure fabric.apikey has & fabric.buildsecret doesn't have target membership.\"\nelse\n    FABRIC_APIKEY=$(cat \"$FABRIC_APIKEY_FILE\")\n    if test $? -ne 0; then\n        echo \"error: Cannot read $FABRIC_APIKEY_FILE\"\n        exit 1\n    fi\n\n    FABRIC_BUILDSECRET=$(cat \"$FABRIC_BUILDSECRET_FILE\")\n    if test $? -ne 0; then\n        echo \"error: Cannot read $FABRIC_BUILDSECRET_FILE\"\n        exit 1\n    fi\n\necho \"Uploading dSYM files to Crashlytics\"\n./Fabric.framework/run \"$FABRIC_APIKEY\" \"$FABRIC_BUILDSECRET\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 

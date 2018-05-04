@@ -26,13 +26,23 @@ final class FabricManager {
 
     // MARK: - Methods
     func start() {
-        if VersionInfo.isProdMode && !isRunning {
-            guard let url = Bundle.main.url(forResource: "fabric.apikey", withExtension: nil) else { return }
-            guard let fabricApiKey = try? String(contentsOf: url).trimmingCharacters(in: .whitespacesAndNewlines) else { return }
+        if !isRunning {
+            // Checking for apikey should also happen in non-prod mode
+            guard let url = Bundle.main.url(forResource: "fabric.apikey", withExtension: nil) else {
+                print("No fabric.apikey file found. If this is a release build, make sure to add it to target.")
+                return
+            }
 
-            Crashlytics.start(withAPIKey: fabricApiKey)
-            Fabric.with([Crashlytics.self, Answers.self])
-            isRunning = true
+            guard let fabricApiKey = try? String(contentsOf: url).trimmingCharacters(in: .whitespacesAndNewlines) else {
+                print("Unable to read fabric.apikey file. If this is a release build, make sure to fix this error.")
+                return
+            }
+
+            if VersionInfo.isProdMode {
+                Crashlytics.start(withAPIKey: fabricApiKey)
+                Fabric.with([Crashlytics.self, Answers.self])
+                isRunning = true
+            }
         }
     }
 

@@ -14,7 +14,10 @@
 </a>
 </p>
 
-This is a very simple ruler for iOS, that just does what it should do. It's also available on the [iOS app store](https://itunes.apple.com/us/app/ruling-ruler/id1248931289) right now, so go ahead and download it there if you don't want to install it yourselves.
+- This is a very simple ruler for iOS, that just does what it should do.
+- We created this when we saw the variety of terrible, ouf-of-date, old-fashioned ruler apps out there and didn't find anything simple just suiting our needs.
+- It's available on the [iOS App Store](https://itunes.apple.com/us/app/ruling-ruler/id1248931289) right now, so go ahead and download it there if you don't want to install it yourselves.
+- The App Store version has Fabric & Crashlytics built-in, but both apikey and buildsecret aren't included in this repository (*you guess why? ;)*). You may however see some warnings reminding you to add these for any release – those are irrelevant to you.
 
 <p align="center">
 <img src="https://github.com/piknotech/RulingRuler/blob/stable/Screenshots.png"
