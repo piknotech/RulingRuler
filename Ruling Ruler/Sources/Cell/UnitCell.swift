@@ -9,6 +9,17 @@
 import UIKit
 
 final class UnitCell: UITableViewCell {
+    // MARK: - Subtypes
+    enum Mode {
+        case centimeter
+        case inch
+    }
+
+    enum ViewMode {
+        case left
+        case right
+    }
+
     // MARK: - Properties
     var number: Int = 0 {
         didSet {
@@ -26,7 +37,7 @@ final class UnitCell: UITableViewCell {
     private var numberLabel: UILabel
 
     // MARK: - Initializers
-    init(mode: CellMode, viewMode: CellViewMode, reuseIdentifier: String?) {
+    init(mode: Mode, viewMode: ViewMode, reuseIdentifier: String?) {
         numberLabel = UILabel()
 
         super.init(style: .default, reuseIdentifier: reuseIdentifier)

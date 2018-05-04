@@ -12,7 +12,6 @@
 		CC56A6DE2083B3E6007C9DB2 /* ScreenshotManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC56A6DD2083B3E6007C9DB2 /* ScreenshotManager.swift */; };
 		CC6591801FC779D600E53019 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC65917F1FC779D600E53019 /* ErrorViewController.swift */; };
 		CC8093111FB8EEDD00D4F726 /* UnitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8093101FB8EEDD00D4F726 /* UnitCell.swift */; };
-		CC8784971FC9F52F002FF1A1 /* CellMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8784961FC9F52F002FF1A1 /* CellMode.swift */; };
 		CCB594342098944E00FE72C2 /* fabric.apikey in Resources */ = {isa = PBXBuildFile; fileRef = CCB594332098944E00FE72C2 /* fabric.apikey */; };
 		CCB594382098BB7A00FE72C2 /* FabricManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB594372098BB7A00FE72C2 /* FabricManager.swift */; };
 		CCC392E320023C9E0050DFB9 /* AppReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC392E220023C9E0050DFB9 /* AppReviewManager.swift */; };
@@ -40,7 +39,6 @@
 		CC56A6DD2083B3E6007C9DB2 /* ScreenshotManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotManager.swift; sourceTree = "<group>"; };
 		CC65917F1FC779D600E53019 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		CC8093101FB8EEDD00D4F726 /* UnitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitCell.swift; sourceTree = "<group>"; };
-		CC8784961FC9F52F002FF1A1 /* CellMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellMode.swift; sourceTree = "<group>"; };
 		CCB594332098944E00FE72C2 /* fabric.apikey */ = {isa = PBXFileReference; lastKnownFileType = text; path = fabric.apikey; sourceTree = "<group>"; };
 		CCB594352098945C00FE72C2 /* fabric.buildsecret */ = {isa = PBXFileReference; lastKnownFileType = text; path = fabric.buildsecret; sourceTree = "<group>"; };
 		CCB594372098BB7A00FE72C2 /* FabricManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabricManager.swift; sourceTree = "<group>"; };
@@ -140,13 +138,12 @@
 			path = "Table View Managers";
 			sourceTree = "<group>";
 		};
-		CC8093121FB8EEE300D4F726 /* Cells */ = {
+		CC8093121FB8EEE300D4F726 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				CC8093101FB8EEDD00D4F726 /* UnitCell.swift */,
-				CC8784961FC9F52F002FF1A1 /* CellMode.swift */,
 			);
-			path = Cells;
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		CCC392E420023CA90050DFB9 /* Managers */ = {
@@ -203,7 +200,7 @@
 				CCD574E21FAE65BD00AA0F69 /* AppDelegate.swift */,
 				CC10BFFA1FAE69A2008FF654 /* Interface */,
 				CC80930D1FB8EEC300D4F726 /* Table View Managers */,
-				CC8093121FB8EEE300D4F726 /* Cells */,
+				CC8093121FB8EEE300D4F726 /* Cell */,
 				CC4088AA209C9F180001960A /* Helpers */,
 			);
 			path = Sources;
@@ -335,7 +332,6 @@
 				CCD574E31FAE65BD00AA0F69 /* AppDelegate.swift in Sources */,
 				CC8093111FB8EEDD00D4F726 /* UnitCell.swift in Sources */,
 				CCFD315C203872C8003AE19F /* InstallationManager.swift in Sources */,
-				CC8784971FC9F52F002FF1A1 /* CellMode.swift in Sources */,
 				CCE89B1C1FB8E53E007B65AE /* InchTableViewManager.swift in Sources */,
 				CC56A6DE2083B3E6007C9DB2 /* ScreenshotManager.swift in Sources */,
 				CC6591801FC779D600E53019 /* ErrorViewController.swift in Sources */,
