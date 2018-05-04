@@ -20,7 +20,7 @@
 - The App Store version has Fabric & Crashlytics built-in, but both apikey and buildsecret aren't included in this repository (*you guess why? ;)*). You may however see some warnings reminding you to add these for any release – those are irrelevant to you.
 
 <p align="center">
-<img src="https://github.com/piknotech/RulingRuler/blob/stable/Screenshots.png"
+<img src="https://github.com/piknotech/RulingRuler/blob/stable/Screenshots.jpg"
 style="width: 8000; height: auto;" alt="Ruling Ruler Screenshots">
 </p>
 
