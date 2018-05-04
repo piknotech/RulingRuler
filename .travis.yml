@@ -1,0 +1,4 @@
+language: swift
+xcode_project: Trivial Torch.xcodeproj
+xcode_scheme: TrivialTorch
+osx_image: xcode9.3
