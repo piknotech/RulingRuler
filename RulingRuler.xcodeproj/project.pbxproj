@@ -43,7 +43,7 @@
 		CCB594352098945C00FE72C2 /* fabric.buildsecret */ = {isa = PBXFileReference; lastKnownFileType = text; path = fabric.buildsecret; sourceTree = "<group>"; };
 		CCB594372098BB7A00FE72C2 /* FabricManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabricManager.swift; sourceTree = "<group>"; };
 		CCC392E220023C9E0050DFB9 /* AppReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReviewManager.swift; sourceTree = "<group>"; };
-		CCD574DF1FAE65BD00AA0F69 /* Ruling Ruler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ruling Ruler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCD574DF1FAE65BD00AA0F69 /* RulingRuler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RulingRuler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCD574E21FAE65BD00AA0F69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCD574E41FAE65BD00AA0F69 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CCD574E91FAE65BD00AA0F69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -163,7 +163,7 @@
 		CCD574E01FAE65BD00AA0F69 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CCD574DF1FAE65BD00AA0F69 /* Ruling Ruler.app */,
+				CCD574DF1FAE65BD00AA0F69 /* RulingRuler.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -212,9 +212,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CCD574DE1FAE65BD00AA0F69 /* Ruling Ruler */ = {
+		CCD574DE1FAE65BD00AA0F69 /* RulingRuler */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CCD574F11FAE65BD00AA0F69 /* Build configuration list for PBXNativeTarget "Ruling Ruler" */;
+			buildConfigurationList = CCD574F11FAE65BD00AA0F69 /* Build configuration list for PBXNativeTarget "RulingRuler" */;
 			buildPhases = (
 				CCD574DB1FAE65BD00AA0F69 /* Sources */,
 				CCD574DC1FAE65BD00AA0F69 /* Frameworks */,
@@ -226,9 +226,9 @@
 			);
 			dependencies = (
 			);
-			name = "Ruling Ruler";
+			name = RulingRuler;
 			productName = "Ruling Ruler";
-			productReference = CCD574DF1FAE65BD00AA0F69 /* Ruling Ruler.app */;
+			productReference = CCD574DF1FAE65BD00AA0F69 /* RulingRuler.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -247,7 +247,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CCD574DA1FAE65BD00AA0F69 /* Build configuration list for PBXProject "Ruling Ruler" */;
+			buildConfigurationList = CCD574DA1FAE65BD00AA0F69 /* Build configuration list for PBXProject "RulingRuler" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -260,7 +260,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CCD574DE1FAE65BD00AA0F69 /* Ruling Ruler */,
+				CCD574DE1FAE65BD00AA0F69 /* RulingRuler */,
 			);
 		};
 /* End PBXProject section */
@@ -509,7 +509,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CCD574DA1FAE65BD00AA0F69 /* Build configuration list for PBXProject "Ruling Ruler" */ = {
+		CCD574DA1FAE65BD00AA0F69 /* Build configuration list for PBXProject "RulingRuler" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CCD574EF1FAE65BD00AA0F69 /* Debug */,
@@ -518,7 +518,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CCD574F11FAE65BD00AA0F69 /* Build configuration list for PBXNativeTarget "Ruling Ruler" */ = {
+		CCD574F11FAE65BD00AA0F69 /* Build configuration list for PBXNativeTarget "RulingRuler" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CCD574F21FAE65BD00AA0F69 /* Debug */,
