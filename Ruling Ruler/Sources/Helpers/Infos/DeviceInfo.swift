@@ -9,9 +9,6 @@
 import Foundation
 
 struct DeviceInfo {
-    // MARK: - Initializers
-    private init() { }
-
     // MARK: - Properties
     /// Device's model identifier
     static let modelIdentifier: String = {
@@ -28,4 +25,7 @@ struct DeviceInfo {
             return identifier + String(UnicodeScalar(UInt8(value)))
         }
     }()
+
+    // MARK: - Initializers
+    private init() { }
 }

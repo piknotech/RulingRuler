@@ -12,9 +12,6 @@ import UIKit
 // swiftlint:disable all
 
 struct DimensionInfo {
-    // MARK: - Initializers
-    private init() { }
-
     // MARK: - Properties
     /// The number of pixels per inch for this device
     static let pixelsPerInch: CGFloat! = {
@@ -75,4 +72,7 @@ struct DimensionInfo {
 
     /// The number of points per centimeter for this device
     static let pointsPerCentimeter = pixelsPerCentimeter * SizeInfo.pixel
+
+    // MARK: - Initializers
+    private init() { }
 }

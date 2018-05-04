@@ -9,9 +9,6 @@
 import UIKit
 
 struct SizeInfo {
-    // MARK: - Initializers
-    private init() { }
-
     // MARK: - Properties
     /// Returns screen's scale
     static var scale: CGFloat {
@@ -37,4 +34,7 @@ struct SizeInfo {
     static var isIpad: Bool {
         return UIDevice.current.userInterfaceIdiom == .pad
     }
+
+    // MARK: - Initializers
+    private init() { }
 }

@@ -25,6 +25,9 @@ final class ScreenshotManager {
     private var currentConfigIndex = 0
     private var cmIsLeftCurrently = true
 
+    // MARK: - Initializers
+    private init() { }
+
     // MARK: - Methods
     /// Main start point. To be called in AppDelegate.
     func takeover() {

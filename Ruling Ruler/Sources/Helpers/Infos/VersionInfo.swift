@@ -9,9 +9,6 @@
 import UIKit
 
 struct VersionInfo {
-    // MARK: - Initializers
-    private init() { }
-
     // MARK: - Properties
     /// App's version
     static var appVersion: String {
@@ -44,4 +41,7 @@ struct VersionInfo {
             return true
         #endif
     }
+
+    // MARK: - Initializers
+    private init() { }
 }
