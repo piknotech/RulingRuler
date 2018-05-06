@@ -29,8 +29,6 @@ final class MainViewController: UIViewController {
 
     private let countMultiplier: Double = 2.0
     private var scrollView = UIScrollView()
-    private var cmTableViewManager = CmTableViewManager()
-    private var inchTableViewManager = InchTableViewManager()
     private var cmTableView1 = UITableView()
     private var cmTableView2 = UITableView()
     private var inchTableView1 = UITableView()
@@ -81,13 +79,13 @@ final class MainViewController: UIViewController {
     private func configureTableViews() {
         // Configure table view managers
         [cmTableView1, cmTableView2].forEach {
-            $0.dataSource = cmTableViewManager
-            $0.delegate = cmTableViewManager
+            $0.dataSource = CmTableViewManager.shared
+            $0.delegate = CmTableViewManager.shared
         }
 
         [inchTableView1, inchTableView2].forEach {
-            $0.dataSource = inchTableViewManager
-            $0.delegate = inchTableViewManager
+            $0.dataSource = InchTableViewManager.shared
+            $0.delegate = InchTableViewManager.shared
         }
 
         // Configure table views
@@ -109,10 +107,21 @@ final class MainViewController: UIViewController {
             )
         }
 
-        [cmTableView2, inchTableView2].forEach { $0.alpha = 0 }
+        [cmTableView2, inchTableView2].forEach {
+            $0.alpha = 0
+        }
 
-        [cmTableView1, cmTableView2].forEach { $0.rowHeight = DimensionInfo.pointsPerCentimeter }
-        [inchTableView1, inchTableView2].forEach { $0.rowHeight = DimensionInfo.pointsPerInch }
+        [cmTableView1, cmTableView2].forEach {
+            $0.rowHeight = DimensionInfo.pointsPerCentimeter
+            $0.estimatedRowHeight = DimensionInfo.pointsPerCentimeter
+            // Estimated row height is needed when scrolling fast
+        }
+
+        [inchTableView1, inchTableView2].forEach {
+            $0.rowHeight = DimensionInfo.pointsPerInch
+            $0.estimatedRowHeight = DimensionInfo.pointsPerInch
+            // Estimated row height is needed when scrolling fast
+        }
 
         tableViews.forEach { tableView in
             tableView.isUserInteractionEnabled = false

@@ -9,6 +9,13 @@
 import UIKit
 
 final class CmTableViewManager: NSObject, UITableViewDelegate, UITableViewDataSource {
+    // MARK: - Properties
+    static let shared = CmTableViewManager()
+
+    // MARK: - Initializers
+    private override init() { }
+
+    // MARK: - Methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return MainViewController.shared.cmCount
     }
