@@ -17,7 +17,7 @@
         <img src="https://img.shields.io/badge/app store-available-14adfb.svg" alt="App Store: Available">
     </a>
     <a href="https://github.com/piknotech/RulingRuler/blob/stable/LICENSE.md">
-        <img src="https://img.shields.io/badge/License-MIT-lightgrey.svg" alt="License: MIT">
+        <img src="https://img.shields.io/badge/license-MIT-lightgrey.svg" alt="License: MIT">
     </a>
 </p>
 
