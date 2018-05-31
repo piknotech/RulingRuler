@@ -109,10 +109,10 @@
 		CC3CD8B72036302A00AE8678 /* Root Files */ = {
 			isa = PBXGroup;
 			children = (
-				CC3CD8B52036302700AE8678 /* .swiftlint.yml */,
-				CC4088A5209C9AF00001960A /* .travis.yml */,
 				CC4088A2209C9AA70001960A /* README.md */,
 				CC4088A4209C9AE70001960A /* LICENSE.md */,
+				CC3CD8B52036302700AE8678 /* .swiftlint.yml */,
+				CC4088A5209C9AF00001960A /* .travis.yml */,
 				CCB594332098944E00FE72C2 /* fabric.apikey */,
 				CCB594352098945C00FE72C2 /* fabric.buildsecret */,
 			);

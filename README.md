@@ -7,7 +7,14 @@
         <img src="https://travis-ci.org/piknotech/RulingRuler.svg?branch=stable" alt="Build Status">
     </a>
     <a href="#">
-        <img src="https://img.shields.io/badge/Swift-4.1-FFAC45.svg" alt="Swift: 4.1">
+        <img src="https://img.shields.io/badge/swift-4.1-FFAC45.svg" alt="Swift: 4.1">
+    </a>
+    <a href="https://github.com/piknotech/RulingRuler/releases">
+        <img src="https://img.shields.io/badge/version-2.0-blue.svg"
+        alt="Version: 2.0">
+    </a>
+    <a href="https://itunes.apple.com/us/app/ruling-ruler/id1248931289" target="_blank">
+        <img src="https://img.shields.io/badge/app store-available-14adfb.svg" alt="App Store: Available">
     </a>
     <a href="https://github.com/piknotech/RulingRuler/blob/stable/LICENSE.md">
         <img src="https://img.shields.io/badge/License-MIT-lightgrey.svg" alt="License: MIT">
