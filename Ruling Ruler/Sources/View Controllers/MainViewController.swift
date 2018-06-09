@@ -141,6 +141,7 @@ final class MainViewController: UIViewController {
         phantomScrollView.frame = view.bounds
         phantomScrollView.showsVerticalScrollIndicator = false
         phantomScrollView.showsHorizontalScrollIndicator = false
+        phantomScrollView.decelerationRate = UIScrollViewDecelerationRateFast
         phantomScrollView.contentSize = CGSize(
             width: view.bounds.width,
             height: DimensionInfo.pointsPerCentimeter * CGFloat(cmCount)
