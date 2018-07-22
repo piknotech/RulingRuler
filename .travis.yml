@@ -1,4 +1,11 @@
 language: swift
-xcode_project: RulingRuler.xcodeproj
-xcode_scheme: RulingRuler
-osx_image: xcode9.3
+osx_image: xcode9.4
+
+before_install:
+- brew upgrade SwiftLint || true
+
+before_script:
+- touch fabric.apikey
+
+script:
+- xcodebuild clean build -project RulingRuler.xcodeproj -scheme RulingRuler -destination "platform=iOS Simulator,name=iPhone 8,OS=11.4" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -quiet
