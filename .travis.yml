@@ -1,5 +1,5 @@
 language: swift
-osx_image: xcode10.0
+osx_image: xcode10
 
 before_install:
 - brew upgrade SwiftLint || true
@@ -8,4 +8,4 @@ before_script:
 - touch fabric.apikey
 
 script:
-- xcodebuild clean build -project RulingRuler.xcodeproj -scheme RulingRuler -destination "platform=iOS Simulator,name=iPhone X,OS=12.0" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -quiet
+- xcodebuild clean build -project RulingRuler.xcodeproj -scheme RulingRuler -destination "platform=iOS Simulator,name=iPhone XS,OS=12.0" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -quiet
