@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC05EEEA2168CF0000147610 /* fabric.apikey in Resources */ = {isa = PBXBuildFile; fileRef = CCB594332098944E00FE72C2 /* fabric.apikey */; };
 		CC10BFFE1FAE69FB008FF654 /* DimensionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10BFFD1FAE69FB008FF654 /* DimensionInfo.swift */; };
 		CC4088A7209C9BE70001960A /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4088A6209C9BE70001960A /* DeviceInfo.swift */; };
 		CC56A6DE2083B3E6007C9DB2 /* ScreenshotManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC56A6DD2083B3E6007C9DB2 /* ScreenshotManager.swift */; };
@@ -270,6 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC05EEEA2168CF0000147610 /* fabric.apikey in Resources */,
 				CCD574ED1FAE65BD00AA0F69 /* LaunchScreen.storyboard in Resources */,
 				CCD574EA1FAE65BD00AA0F69 /* Assets.xcassets in Resources */,
 			);
