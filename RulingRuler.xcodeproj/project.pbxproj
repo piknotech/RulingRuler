@@ -185,8 +185,8 @@
 		CC3456502173CF400072487B /* WatchApp Extension */ = {
 			isa = PBXGroup;
 			children = (
-				CC3456512173CF400072487B /* InterfaceController.swift */,
 				CC3456532173CF400072487B /* ExtensionDelegate.swift */,
+				CC3456512173CF400072487B /* InterfaceController.swift */,
 				CC3456552173CF400072487B /* Assets.xcassets */,
 				CC3456572173CF400072487B /* Info.plist */,
 			);

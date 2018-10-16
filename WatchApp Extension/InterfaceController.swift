@@ -58,11 +58,13 @@ class InterfaceController: WKInterfaceController {
         updateUI()
     }
 
+    // MARK: Actions
     @IBAction func switchSidesButtonPressed() {
         currentOrientation = currentOrientation == .cmInch ? .inchCm: .cmInch
         updateUI()
     }
 
+    // MARK: Updating UI
     private func updateUI() {
         guard let watchType = watchType else {
             mainImageView.setHidden(true)
@@ -77,6 +79,7 @@ class InterfaceController: WKInterfaceController {
         errorLabel.setHidden(true)
     }
 
+    // MARK: Helpers
     private func image(forType watchType: WatchType, orientation orientationType: OrientationType) -> UIImage {
         let imageName = "\(watchType)-\(orientationType)"
         guard let image = UIImage(named: "\(watchType)-\(orientationType)") else {
