@@ -26,19 +26,21 @@ class InterfaceController: WKInterfaceController {
     // MARK: - Properties
     private var currentOrientation: OrientationType = .cmInch
     private lazy var watchType: WatchType? = {
-        // TODO
-        print(WKInterfaceDevice.current().model)
-        switch WKInterfaceDevice.current().model {
-        case "qwer":
+        let screenSize = WKInterfaceDevice.current().screenBounds.size
+        let scale = WKInterfaceDevice.current().screenScale
+        let pixels = screenSize.applying(CGAffineTransform(scaleX: scale, y: scale))
+
+        switch pixels {
+        case CGSize(width: 368, height: 448):
             return .watch44
 
-        case "fgh":
+        case CGSize(width: 312, height: 390):
             return .watch42
 
-        case "dfg":
+        case CGSize(width: 324, height: 394):
             return .watch40
 
-        case "sdf":
+        case CGSize(width: 272, height: 340):
             return .watch38
 
         default:
