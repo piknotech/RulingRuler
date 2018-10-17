@@ -8,12 +8,16 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14238.10"/>
     </dependencies>
     <scenes>
-        <!--Ruling Ruler-->
+        <!--Ruler-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller identifier="Main" title="Ruling Ruler" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchApp" customModuleProvider="target">
+                <controller identifier="Main" title="Ruler" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchApp" customModuleProvider="target">
                     <items>
-                        <label alignment="center" text="This  Watch model is not supported yet, but will be in an upcoming update!" textAlignment="center" numberOfLines="0" id="FqU-Yz-SyG"/>
+                        <label alignment="center" textAlignment="center" numberOfLines="0" id="FqU-Yz-SyG">
+                            <string key="text">Unfortunately, this  Watch model is not supported yet.
+
+The good news: An update to add support is probably already in the works 😉</string>
+                        </label>
                         <imageView alignment="left" id="KB2-WP-BSu"/>
                     </items>
                     <menu key="menu" id="wJu-xu-4cb">
