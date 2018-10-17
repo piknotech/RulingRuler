@@ -10,8 +10,8 @@
         <img src="https://img.shields.io/badge/swift-4.2-FFAC45.svg" alt="Swift: 4.2">
     </a>
     <a href="https://github.com/piknotech/RulingRuler/releases">
-        <img src="https://img.shields.io/badge/version-2.1.2-blue.svg"
-        alt="Version: 2.1.2">
+        <img src="https://img.shields.io/badge/version-3.0-blue.svg"
+        alt="Version: 3.0">
     </a>
     <a href="https://itunes.apple.com/us/app/ruling-ruler/id1248931289" target="_blank">
         <img src="https://img.shields.io/badge/app store-available-14adfb.svg" alt="App Store: Available">
