@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14313.18" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14238.10"/>
+    </dependencies>
+    <scenes>
+        <!--Ruling Ruler-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="Main" title="Ruling Ruler" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchApp" customModuleProvider="target">
+                    <items>
+                        <label alignment="center" text="This  Watch model is not supported yet, but will be in an upcoming update!" textAlignment="center" numberOfLines="0" id="FqU-Yz-SyG"/>
+                        <imageView alignment="left" id="KB2-WP-BSu"/>
+                    </items>
+                    <menu key="menu" id="wJu-xu-4cb">
+                        <items>
+                            <menuItem title="Switch Sides" icon="shuffle" id="kKa-hK-Un7">
+                                <connections>
+                                    <action selector="switchSidesButtonPressed" destination="AgC-eL-Hgc" id="wS8-VW-2HL"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="errorLabel" destination="FqU-Yz-SyG" id="jXg-uO-qVc"/>
+                        <outlet property="mainImageView" destination="KB2-WP-BSu" id="y6D-gO-hcI"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.14117647058823529" green="0.76078431372549016" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
+</document>
