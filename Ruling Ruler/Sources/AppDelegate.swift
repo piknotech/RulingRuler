@@ -21,11 +21,13 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // Load view controller
         window = UIWindow(frame: UIScreen.main.bounds)
-        var rootVc: UIViewController = MainViewController.shared
 
+        let rootVc: UIViewController
         if DimensionInfo.pixelsPerInch == nil {
             rootVc = ErrorViewController()
             FabricManager.shared.log(.unknownDevice)
+        } else {
+            rootVc = MainViewController.shared
         }
 
         window!.rootViewController = rootVc
@@ -35,12 +37,15 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         // ScreenshotManager.shared.takeover()
         // return true
 
-        // Show tutorial
-        let tutorialShown = TutorialManager.shared.showTutorialIfNeeded(on: MainViewController.shared)
+        // Show tutorial if not in error vc
+        if rootVc is MainViewController {
+            // Show tutorial
+            let tutorialShown = TutorialManager.shared.showTutorialIfNeeded(on: MainViewController.shared)
 
-        // Request review
-        if !tutorialShown {
-            AppReviewManager.shared.request()
+            // Request review
+            if !tutorialShown {
+                AppReviewManager.shared.request()
+            }
         }
 
         return true
