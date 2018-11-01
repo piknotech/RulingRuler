@@ -26,6 +26,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         if DimensionInfo.pixelsPerInch == nil {
             rootVc = ErrorViewController()
             FabricManager.shared.log(.unknownDevice)
+            print("Unknown model: \(DeviceInfo.modelIdentifier)")
         } else {
             rootVc = MainViewController.shared
         }
